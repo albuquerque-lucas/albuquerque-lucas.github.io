@@ -1,0 +1,14 @@
+@import '../abstract/_variables.scss';
+
+
+#start{
+    min-height: calc(100vh - $size-navbar);
+}
+
+.section-card{
+    min-height: 100vh;
+    border: 1px solid white;
+    h2{
+        text-align: center;
+    }
+}
