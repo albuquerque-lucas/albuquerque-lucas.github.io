@@ -1,0 +1,10 @@
+@import '../abstract/_variables.scss';
+
+body{
+    display: flex;
+    flex-direction: column;
+    background: $color-primary;
+    color: $color-quinary;
+    margin: 0;
+    padding: 0;
+}
