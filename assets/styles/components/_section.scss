@@ -1,13 +1,13 @@
 @import '../abstract/_variables.scss';
 
 
-#start{
-    min-height: calc(100vh - $size-navbar);
+#main-content{
+    position: relative;
+    top: $size-navbar;
 }
 
 .section-card{
     min-height: 100vh;
-    border: 1px solid white;
     .card-header{
         display: flex;
         flex-direction: column;
