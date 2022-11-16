@@ -1,0 +1,34 @@
+body {
+  display: flex;
+  flex-direction: column;
+  background: rgb(27, 23, 23);
+  color: rgb(238, 235, 221);
+  margin: 0;
+  padding: 0;
+}
+
+#navbar-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 5rem;
+  margin: 0;
+  padding: 0;
+}
+#navbar-main a {
+  color: rgb(238, 235, 221);
+  text-decoration: none;
+}
+#navbar-main ul {
+  margin: 0;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+#navbar-main ul li {
+  margin: 0.25rem 1rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 15px;
+  font-size: 18px;
+}/*# sourceMappingURL=style.css.map */
