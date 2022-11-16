@@ -13,6 +13,8 @@ body {
 }
 
 #navbar-main {
+  font-family: "Quando", serif;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -36,16 +38,16 @@ body {
   margin: 0.25rem 1rem;
   padding: 0.25rem 0.5rem;
   border-radius: 15px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
-#start {
-  min-height: calc(100vh - 5rem);
+#main-content {
+  position: relative;
+  top: 5rem;
 }
 
 .section-card {
   min-height: 100vh;
-  border: 1px solid white;
 }
 .section-card .card-header {
   display: flex;
