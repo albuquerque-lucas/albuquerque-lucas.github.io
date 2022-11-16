@@ -5,9 +5,10 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 5rem;
+    height: $size-navbar;
     margin: 0;
     padding: 0;
+    border-bottom: 2px solid $color-quinary;
     a{
         color: $color-quinary;
         text-decoration: none;
