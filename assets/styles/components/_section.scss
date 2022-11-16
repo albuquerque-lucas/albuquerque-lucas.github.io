@@ -8,7 +8,24 @@
 .section-card{
     min-height: 100vh;
     border: 1px solid white;
-    h2{
-        text-align: center;
+    .card-header{
+        display: flex;
+        justify-content: center;
+        h2{
+            text-align: center;
+            justify-self: center;
+        }
+        a{
+            color: $color-quinary;
+            text-decoration: none;
+            padding: .25rem .5rem;
+            border-radius: 15px;
+            position: relative;
+            &:hover{
+                background: $color-quinary;
+                color: $color-primary;
+            }
+        }
     }
+
 }

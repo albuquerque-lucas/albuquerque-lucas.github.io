@@ -1,3 +1,8 @@
+:root {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -42,6 +47,22 @@ body {
   min-height: 100vh;
   border: 1px solid white;
 }
-.section-card h2 {
+.section-card .card-header {
+  display: flex;
+  justify-content: center;
+}
+.section-card .card-header h2 {
   text-align: center;
+  justify-self: center;
+}
+.section-card .card-header a {
+  color: rgb(238, 235, 221);
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 15px;
+  position: relative;
+}
+.section-card .card-header a:hover {
+  background: rgb(238, 235, 221);
+  color: rgb(27, 23, 23);
 }/*# sourceMappingURL=style.css.map */
