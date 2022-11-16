@@ -49,11 +49,11 @@ body {
 }
 .section-card .card-header {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 .section-card .card-header h2 {
   text-align: center;
-  justify-self: center;
 }
 .section-card .card-header a {
   color: rgb(238, 235, 221);
@@ -61,6 +61,7 @@ body {
   padding: 0.25rem 0.5rem;
   border-radius: 15px;
   position: relative;
+  justify-self: flex-end;
 }
 .section-card .card-header a:hover {
   background: rgb(238, 235, 221);
