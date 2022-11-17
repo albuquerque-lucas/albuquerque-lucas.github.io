@@ -52,10 +52,15 @@ body {
   position: relative;
   top: 25%;
   transform: translateY(-50%);
+  font-size: 21px;
 }
 #start .left-content {
   text-align: center;
 }
+#start .right-content p {
+  width: 80%;
+}
+
 .section-card {
   font-family: "Quando", serif;
   min-height: 100vh;
