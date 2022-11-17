@@ -84,7 +84,7 @@
                         box-shadow: -1px 1px 3px $color-tertiary;
                     }
                     &::after{
-                        background: $color-quaternary;
+                        background: $color-tertiary;
                         box-shadow: 1px -1px 3px $color-quaternary;
                     }
                 }
@@ -99,8 +99,8 @@
                         box-shadow: -1px 1px 3px $color-card-css-primary;
                     }
                     &::after{
-                        background: $color-card-css-secondary;
-                        box-shadow: 1px -1px 3px $color-card-css-secondary;
+                        background: $color-card-css-primary;
+                        box-shadow: 1px -1px 3px $color-card-css-primary;
                     }
                 }
 
@@ -114,8 +114,8 @@
                         box-shadow: -1px 1px 3px $color-card-javascript-primary;
                     }
                     &::after{
-                        background: $color-card-javascript-secondary;
-                        box-shadow: 1px -1px 3px $color-card-javascript-secondary;
+                        background: $color-card-javascript-primary;
+                        box-shadow: 1px -1px 3px $color-card-javascript-primary;
                     }
                 }
 
@@ -129,8 +129,8 @@
                         box-shadow: -1px 1px 3px $color-card-php-primary;
                     }
                     &::after{
-                        background: $color-card-php-secondary;
-                        box-shadow: 1px -1px 3px $color-card-php-secondary;
+                        background: $color-card-php-primary;
+                        box-shadow: 1px -1px 3px $color-card-php-primary;
                     }
                 }
             }
