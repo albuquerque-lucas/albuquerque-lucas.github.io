@@ -1,6 +1,7 @@
 @import '../abstract/_variables.scss';
 
 .section-card{
+    font-family: $font-primary;
     min-height: 100vh;
     .card-header{
         display: flex;
@@ -74,38 +75,62 @@
                 }
 
                 #card-html{
+                    &:hover{
+                        text-shadow: 0 0 3px $color-tertiary;
+                        color: $color-tertiary;
+                    }
                     &::before{
                         background: $color-tertiary;
+                        box-shadow: -1px 1px 3px $color-tertiary;
                     }
                     &::after{
                         background: $color-quaternary;
+                        box-shadow: 1px -1px 3px $color-quaternary;
                     }
                 }
 
                 #card-css{
+                    &:hover{
+                        text-shadow: 0 0 3px $color-card-css-primary;
+                        color: $color-card-css-primary;
+                    }
                     &::before{
                         background: $color-card-css-primary;
+                        box-shadow: -1px 1px 3px $color-card-css-primary;
                     }
                     &::after{
                         background: $color-card-css-secondary;
+                        box-shadow: 1px -1px 3px $color-card-css-secondary;
                     }
                 }
 
                 #card-javascript{
+                    &:hover{
+                        text-shadow: 0 0 3px $color-card-javascript-primary;
+                        color: $color-card-javascript-primary;
+                    }
                     &::before{
                         background: $color-card-javascript-primary;
+                        box-shadow: -1px 1px 3px $color-card-javascript-primary;
                     }
                     &::after{
                         background: $color-card-javascript-secondary;
+                        box-shadow: 1px -1px 3px $color-card-javascript-secondary;
                     }
                 }
 
                 #card-php{
+                    &:hover{
+                        text-shadow: 0 0 3px $color-card-php-primary;
+                        color: $color-card-php-primary;
+                    }
                     &::before{
                         background: $color-card-php-primary;
+                        box-shadow: -1px 1px 3px $color-card-php-primary;
                     }
                     &::after{
                         background: $color-card-php-secondary;
+                        box-shadow: 1px -1px 3px $color-card-php-secondary;
                     }
                 }
             }
