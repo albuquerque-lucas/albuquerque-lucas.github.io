@@ -32,34 +32,44 @@
             ul{
                 padding: 0;
                 position: relative;
-                right: .5rem;
-                #card-html{
-                    background: red;
-                    position: relative;
-                    &:hover::before{
-                        height: 110%;
-                        width: 100.5%;
-                        content: 'eses';
-                        position: absolute;
-                        left: 0;
-                        z-index: -1;
-                        border-radius: 15px;
-                        background: white;
-                        margin: 0;
-                        padding: 0;
 
-                }
-                    }
 
-                    
                 .tecnology-card{
                     display: flex;
                     align-items: center;
                     height: 40px;
                     width: 38rem;
-                    border: 1px solid white;
                     border-radius: 15px;
+                    margin-bottom: 1rem;
                     padding: .5rem 1.5rem;
+                    position: relative;
+                    background-color: $color-primary;
+                    &:hover::before{
+                        height: 100%;
+                        width: 100%;
+                        content: '';
+                        position: absolute;
+                        left: -3px;
+                        top: 3px;
+                        z-index: -1;
+                        border-radius: 15px;
+                        background: white;
+                        margin: 0;
+                        padding: 0;
+                    }
+                    &:hover::after{
+                        height: 100%;
+                        width: 100%;
+                        content: '';
+                        position: absolute;
+                        left: 3px;
+                        top: -3px;
+                        z-index: -1;
+                        border-radius: 15px;
+                        background: lightcoral;
+                        margin: 0;
+                        padding: 0;
+                    }
 
                 }
             }

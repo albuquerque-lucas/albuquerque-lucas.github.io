@@ -72,32 +72,43 @@ body {
 .section-card .card-body .tecnology-list ul {
   padding: 0;
   position: relative;
-  right: 0.5rem;
-}
-.section-card .card-body .tecnology-list ul #card-html {
-  background: red;
-  position: relative;
-}
-.section-card .card-body .tecnology-list ul #card-html:hover::before {
-  height: 110%;
-  width: 100.5%;
-  content: "eses";
-  position: absolute;
-  left: 0;
-  z-index: -1;
-  border-radius: 15px;
-  background: white;
-  margin: 0;
-  padding: 0;
 }
 .section-card .card-body .tecnology-list ul .tecnology-card {
   display: flex;
   align-items: center;
   height: 40px;
   width: 38rem;
-  border: 1px solid white;
   border-radius: 15px;
+  margin-bottom: 1rem;
   padding: 0.5rem 1.5rem;
+  position: relative;
+  background-color: rgb(27, 23, 23);
+}
+.section-card .card-body .tecnology-list ul .tecnology-card:hover::before {
+  height: 100%;
+  width: 100%;
+  content: "";
+  position: absolute;
+  left: -3px;
+  top: 3px;
+  z-index: -1;
+  border-radius: 15px;
+  background: white;
+  margin: 0;
+  padding: 0;
+}
+.section-card .card-body .tecnology-list ul .tecnology-card:hover::after {
+  height: 100%;
+  width: 100%;
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: -3px;
+  z-index: -1;
+  border-radius: 15px;
+  background: lightcoral;
+  margin: 0;
+  padding: 0;
 }
 
 #tecnologias {
