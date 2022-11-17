@@ -27,9 +27,9 @@
     .card-body{
         padding: .5rem;
         display: flex;
-        flex-direction: column;
 
         .tecnology-list{
+            width: 50%;
             ul{
                 padding: 0;
                 position: relative;
@@ -136,11 +136,18 @@
             }
         }
 
+        .tecnology-brief{
+            width: 46%;
+            height: 80vh;
+            border-radius: 15px;
+            padding: 1rem;
+            position: relative;
+            left: 1%;
 
+            .tecnology-content{
+                display: none;
+            }
+        }
     }
 
-}
-
-#tecnologias{
-    border: 1px solid white;
 }
