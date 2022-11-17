@@ -55,10 +55,17 @@ body {
   font-size: 21px;
 }
 #start .left-content {
+  width: 40%;
   text-align: center;
 }
 #start .right-content p {
   width: 80%;
+}
+
+#sobre-mim .sobre-mim-content {
+  position: relative;
+  top: 10rem;
+  width: 50%;
 }
 
 .section-card {
