@@ -3,6 +3,18 @@
 .section-card{
     font-family: $font-primary;
     min-height: 100vh;
+    // &::after{
+    //     display: block;
+    //     content: '.';
+    //     width: 50vw;
+    //     height: .25rem;
+    //     text-align: center;
+    //     background-color: $color-quinary;
+    //     position: relative;
+    //     left: 50%;
+    //     transform: translateX(-50%);
+    //     margin-bottom: 3rem;
+    // }
     .card-header{
         display: flex;
         flex-direction: column;
@@ -39,7 +51,7 @@
                     display: flex;
                     align-items: center;
                     height: 40px;
-                    width: 38rem;
+                    width: 37rem;
                     border-radius: 15px;
                     margin-bottom: 1rem;
                     padding: .5rem 1.5rem;
@@ -67,7 +79,6 @@
                         top: -3px;
                         z-index: -1;
                         border-radius: 15px;
-                        background: lightcoral;
                         margin: 0;
                         padding: 0;
                     }
@@ -76,6 +87,7 @@
 
                 #card-html{
                     &:hover{
+                        border-top: 1px solid $color-tertiary;
                         text-shadow: 0 0 3px $color-tertiary;
                         color: $color-tertiary;
                     }
@@ -83,14 +95,11 @@
                         background: $color-tertiary;
                         box-shadow: -1px 1px 3px $color-tertiary;
                     }
-                    &::after{
-                        background: $color-tertiary;
-                        box-shadow: 1px -1px 3px $color-quaternary;
-                    }
                 }
 
                 #card-css{
                     &:hover{
+                        border-top: 1px solid $color-card-css-primary;
                         text-shadow: 0 0 3px $color-card-css-primary;
                         color: $color-card-css-primary;
                     }
@@ -98,14 +107,11 @@
                         background: $color-card-css-primary;
                         box-shadow: -1px 1px 3px $color-card-css-primary;
                     }
-                    &::after{
-                        background: $color-card-css-primary;
-                        box-shadow: 1px -1px 3px $color-card-css-primary;
-                    }
                 }
 
                 #card-javascript{
                     &:hover{
+                        border-top: 1px solid $color-card-javascript-primary;
                         text-shadow: 0 0 3px $color-card-javascript-primary;
                         color: $color-card-javascript-primary;
                     }
@@ -113,24 +119,17 @@
                         background: $color-card-javascript-primary;
                         box-shadow: -1px 1px 3px $color-card-javascript-primary;
                     }
-                    &::after{
-                        background: $color-card-javascript-primary;
-                        box-shadow: 1px -1px 3px $color-card-javascript-primary;
-                    }
                 }
 
                 #card-php{
                     &:hover{
+                        border-top: 1px solid $color-card-php-primary;
                         text-shadow: 0 0 3px $color-card-php-primary;
                         color: $color-card-php-primary;
                     }
                     &::before{
                         background: $color-card-php-primary;
                         box-shadow: -1px 1px 3px $color-card-php-primary;
-                    }
-                    &::after{
-                        background: $color-card-php-primary;
-                        box-shadow: 1px -1px 3px $color-card-php-primary;
                     }
                 }
             }
@@ -142,7 +141,7 @@
             border-radius: 15px;
             padding: 1rem;
             position: relative;
-            left: 1%;
+            right: 1.5%;
 
             .tecnology-content{
                 display: none;

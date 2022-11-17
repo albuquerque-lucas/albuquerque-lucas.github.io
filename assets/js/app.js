@@ -45,12 +45,13 @@ function iluminateCard(tecnologyCard, tecnologyContent){
 
 function changeProperties(listItem, itemWithId, color, content)
 {
-    const tecnolofyBrief = document.querySelector('.tecnology-brief');
+    const tecnologyBrief = document.querySelector('.tecnology-brief');
 
     if(listItem === itemWithId)
     {
-        tecnolofyBrief.style.boxShadow = `0 0 15px ${color}`;
-        tecnolofyBrief.style.border = `${borderThickness}, solir ${color}`;
+        tecnologyBrief.style.boxShadow = `0 0 15px ${color}`;
+        tecnologyBrief.style.border = `${borderThickness} solid ${color}`;
+        tecnologyBrief.style.borderLeft = 'none';
         content.style.display = 'block';
     }
 }

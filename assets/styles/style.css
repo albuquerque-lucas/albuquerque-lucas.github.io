@@ -80,7 +80,7 @@ body {
   display: flex;
   align-items: center;
   height: 40px;
-  width: 38rem;
+  width: 37rem;
   border-radius: 15px;
   margin-bottom: 1rem;
   padding: 0.5rem 1.5rem;
@@ -109,11 +109,11 @@ body {
   top: -3px;
   z-index: -1;
   border-radius: 15px;
-  background: lightcoral;
   margin: 0;
   padding: 0;
 }
 .section-card .card-body .tecnology-list ul #card-html:hover {
+  border-top: 1px solid rgb(206, 18, 18);
   text-shadow: 0 0 3px rgb(206, 18, 18);
   color: rgb(206, 18, 18);
 }
@@ -121,11 +121,8 @@ body {
   background: rgb(206, 18, 18);
   box-shadow: -1px 1px 3px rgb(206, 18, 18);
 }
-.section-card .card-body .tecnology-list ul #card-html::after {
-  background: rgb(206, 18, 18);
-  box-shadow: 1px -1px 3px rgb(129, 0, 0);
-}
 .section-card .card-body .tecnology-list ul #card-css:hover {
+  border-top: 1px solid rgb(152, 193, 217);
   text-shadow: 0 0 3px rgb(152, 193, 217);
   color: rgb(152, 193, 217);
 }
@@ -133,11 +130,8 @@ body {
   background: rgb(152, 193, 217);
   box-shadow: -1px 1px 3px rgb(152, 193, 217);
 }
-.section-card .card-body .tecnology-list ul #card-css::after {
-  background: rgb(152, 193, 217);
-  box-shadow: 1px -1px 3px rgb(152, 193, 217);
-}
 .section-card .card-body .tecnology-list ul #card-javascript:hover {
+  border-top: 1px solid rgb(245, 131, 1);
   text-shadow: 0 0 3px rgb(245, 131, 1);
   color: rgb(245, 131, 1);
 }
@@ -145,11 +139,8 @@ body {
   background: rgb(245, 131, 1);
   box-shadow: -1px 1px 3px rgb(245, 131, 1);
 }
-.section-card .card-body .tecnology-list ul #card-javascript::after {
-  background: rgb(245, 131, 1);
-  box-shadow: 1px -1px 3px rgb(245, 131, 1);
-}
 .section-card .card-body .tecnology-list ul #card-php:hover {
+  border-top: 1px solid rgb(171, 0, 255);
   text-shadow: 0 0 3px rgb(171, 0, 255);
   color: rgb(171, 0, 255);
 }
@@ -157,17 +148,13 @@ body {
   background: rgb(171, 0, 255);
   box-shadow: -1px 1px 3px rgb(171, 0, 255);
 }
-.section-card .card-body .tecnology-list ul #card-php::after {
-  background: rgb(171, 0, 255);
-  box-shadow: 1px -1px 3px rgb(171, 0, 255);
-}
 .section-card .card-body .tecnology-brief {
   width: 46%;
   height: 80vh;
   border-radius: 15px;
   padding: 1rem;
   position: relative;
-  left: 1%;
+  right: 1.5%;
 }
 .section-card .card-body .tecnology-brief .tecnology-content {
   display: none;
