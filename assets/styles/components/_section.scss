@@ -1,5 +1,39 @@
 @import '../abstract/_variables.scss';
 
+#start{
+    display: flex;
+    .start-content{
+        width: 50%;
+        padding: 1rem;
+        p{
+            position: relative;
+            top: 25%;
+            transform:translateY(-50%);
+            font-size: $font-size-text * 1.5;
+        }
+    }
+
+    .left-content{
+        width: 40%;
+        text-align: center;
+    }
+
+    .right-content{
+        p{
+            width: 80%;
+        }
+    }
+}
+
+#sobre-mim{
+    .sobre-mim-content{
+        position: relative;
+        top: 10rem;
+        width: 50%;
+    }
+}
+
+
 .section-card{
     font-family: $font-primary;
     min-height: 100vh;

@@ -41,6 +41,33 @@ body {
   font-size: 16px;
 }
 
+#start {
+  display: flex;
+}
+#start .start-content {
+  width: 50%;
+  padding: 1rem;
+}
+#start .start-content p {
+  position: relative;
+  top: 25%;
+  transform: translateY(-50%);
+  font-size: 21px;
+}
+#start .left-content {
+  width: 40%;
+  text-align: center;
+}
+#start .right-content p {
+  width: 80%;
+}
+
+#sobre-mim .sobre-mim-content {
+  position: relative;
+  top: 10rem;
+  width: 50%;
+}
+
 .section-card {
   font-family: "Quando", serif;
   min-height: 100vh;
