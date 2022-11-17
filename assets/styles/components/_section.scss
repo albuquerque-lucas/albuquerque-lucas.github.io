@@ -1,5 +1,26 @@
 @import '../abstract/_variables.scss';
 
+#start{
+    display: flex;
+    .start-content{
+        width: 50%;
+        padding: 1rem;
+        p{
+            position: relative;
+            top: 25%;
+            transform:translateY(-50%);
+        }
+    }
+
+    .left-content{
+        text-align: center;
+    }
+
+    .right-content{
+    }
+}
+
+
 .section-card{
     font-family: $font-primary;
     min-height: 100vh;
