@@ -41,11 +41,6 @@ body {
   font-size: 16px;
 }
 
-#main-content {
-  position: relative;
-  top: 5rem;
-}
-
 .section-card {
   min-height: 100vh;
 }
@@ -68,4 +63,78 @@ body {
 .section-card .card-header a:hover {
   background: rgb(238, 235, 221);
   color: rgb(27, 23, 23);
+}
+.section-card .card-body {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.section-card .card-body .tecnology-list ul {
+  padding: 0;
+  position: relative;
+}
+.section-card .card-body .tecnology-list ul .tecnology-card {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  width: 38rem;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1.5rem;
+  position: relative;
+  background-color: rgb(27, 23, 23);
+}
+.section-card .card-body .tecnology-list ul .tecnology-card:hover::before {
+  height: 100%;
+  width: 100%;
+  content: "";
+  position: absolute;
+  left: -3px;
+  top: 3px;
+  z-index: -1;
+  border-radius: 15px;
+  background: white;
+  margin: 0;
+  padding: 0;
+}
+.section-card .card-body .tecnology-list ul .tecnology-card:hover::after {
+  height: 100%;
+  width: 100%;
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: -3px;
+  z-index: -1;
+  border-radius: 15px;
+  background: lightcoral;
+  margin: 0;
+  padding: 0;
+}
+.section-card .card-body .tecnology-list ul #card-html::before {
+  background: rgb(206, 18, 18);
+}
+.section-card .card-body .tecnology-list ul #card-html::after {
+  background: rgb(129, 0, 0);
+}
+.section-card .card-body .tecnology-list ul #card-css::before {
+  background: #98c1d9;
+}
+.section-card .card-body .tecnology-list ul #card-css::after {
+  background: #3d5a80;
+}
+.section-card .card-body .tecnology-list ul #card-javascript::before {
+  background: #f58301;
+}
+.section-card .card-body .tecnology-list ul #card-javascript::after {
+  background: #2a2e34;
+}
+.section-card .card-body .tecnology-list ul #card-php::before {
+  background: rgb(171, 0, 255);
+}
+.section-card .card-body .tecnology-list ul #card-php::after {
+  background: rgb(49, 0, 74);
+}
+
+#tecnologias {
+  border: 1px solid white;
 }/*# sourceMappingURL=style.css.map */
