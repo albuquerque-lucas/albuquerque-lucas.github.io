@@ -41,11 +41,6 @@ body {
   font-size: 16px;
 }
 
-#main-content {
-  position: relative;
-  top: 5rem;
-}
-
 .section-card {
   min-height: 100vh;
 }
@@ -68,4 +63,43 @@ body {
 .section-card .card-header a:hover {
   background: rgb(238, 235, 221);
   color: rgb(27, 23, 23);
+}
+.section-card .card-body {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.section-card .card-body .tecnology-list ul {
+  padding: 0;
+  position: relative;
+  right: 0.5rem;
+}
+.section-card .card-body .tecnology-list ul #card-html {
+  background: red;
+  position: relative;
+}
+.section-card .card-body .tecnology-list ul #card-html:hover::before {
+  height: 110%;
+  width: 100.5%;
+  content: "eses";
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  border-radius: 15px;
+  background: white;
+  margin: 0;
+  padding: 0;
+}
+.section-card .card-body .tecnology-list ul .tecnology-card {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  width: 38rem;
+  border: 1px solid white;
+  border-radius: 15px;
+  padding: 0.5rem 1.5rem;
+}
+
+#tecnologias {
+  border: 1px solid white;
 }/*# sourceMappingURL=style.css.map */
