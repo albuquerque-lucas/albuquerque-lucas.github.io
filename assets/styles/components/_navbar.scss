@@ -22,10 +22,21 @@
         justify-content: center;
         list-style: none;
         li{
-            margin: .25rem 1rem;
-            padding: .25rem .5rem;
-            border-radius: 15px;
-            font-size: $font-size-navbar-desktop;
+
+            a{
+                margin: .25rem 1rem;
+                padding: .25rem .5rem;
+                border-radius: 15px;
+                font-size: $font-size-navbar-desktop;            margin: .25rem 1rem;
+                padding: .25rem .5rem;
+                border-radius: 15px;
+                font-size: $font-size-navbar-desktop;
+                &:hover{
+                    background: $color-quinary;
+                    color: $color-secondary;
+                }
+            }
+
         }
     }
 }
