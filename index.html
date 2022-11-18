@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="assets/styles/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/styles/fontawesome/css/fontawesome.css">
     <link href="/assets/styles/fontawesome/css/solid.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quando">
     <link rel="stylesheet" href="assets/styles/style.css">
@@ -16,13 +16,13 @@
 
 <body>
     <header id="page-header">
-
+        <div id="trigger"></div>
         <nav id="navbar-main">
-            
+
             <button id="menu-trigger"><i class="fa-regular fa-bars"></i></button>
 
             <ul id="navbar-list">
-                <li><a href="#page-header">Início</a></li>
+                <li><a href="#trigger">Início</a></li>
                 <li><a href="#sobre-mim">Sobre mim</a></li>
                 <li><a href="#projetos">Projetos</a></li>
                 <li><a href="#tecnologias">Tecnologias</a></li>
@@ -32,15 +32,15 @@
         </nav>
 
     </header>
-    <!-- <main id="main-content">
+    <main id="main-content">
 
-        <section id="start" class="section-card">
+        <section class="section-card start">
             <div class="left-content start-content">
                 <p>Seja bem vindo! &#128578 </p>
             </div>
             <div class="right-content start-content">
                 <p>
-                    Me chamo Lucas Albuquerque &#128513	
+                    Me chamo Lucas Albuquerque &#128513
                     Desenvolvedor Full Stack
 
                     <br><br>
@@ -49,37 +49,49 @@
             </div>
 
         </section>
-        <section id="sobre-mim" class="section-card">
+        <section class="section-card about-me">
             <div class="card-header">
                 <h2>Sobre mim</h2> <a href="#page-header">Voltar</a>
                 <div class="sobre-mim-content">
 
                     <p>
-                        Meu nome é Lucas Albuquerque, um apaixonado por tecnologia que embarcou no mundo do desenvolvimento web!
+                        Meu nome é Lucas Albuquerque, um apaixonado por tecnologia que embarcou no mundo do
+                        desenvolvimento web!
                         <br><br>
-                        Cheguei nessa área após passar brevemente pela área militar na EsPCEx em Campinas. Tendo saído da área, iniciei a faculdade de Administração na UFJF. Durante o curso, fui abordado por um amigo, que me indicou aprender a programar, após uma conversa sobre o futuro.
+                        Cheguei nessa área após passar brevemente pela área militar na EsPCEx em Campinas. Tendo saído
+                        da área, iniciei a faculdade de Administração na UFJF. Durante o curso, fui abordado por um
+                        amigo, que me indicou aprender a programar, após uma conversa sobre o futuro.
                         <br><br>
-                        Ao iniciar meus estudos, aprendi diversas tecnologias, realmente me encontrando no ramo e decidido a proporcionar para meus clientes os melhores resultados e experiências de usuário!
+                        Ao iniciar meus estudos, aprendi diversas tecnologias, realmente me encontrando no ramo e
+                        decidido a proporcionar para meus clientes os melhores resultados e experiências de usuário!
                     </p>
                 </div>
             </div>
         </section>
-        <section id="projetos" class="section-card">
+        <section id="projetos" class="section-card projetos">
             <div class="card-header">
                 <h2>Projetos</h2> <a href="#page-header">Voltar</a>
             </div>
         </section>
-        <section id="tecnologias" class="section-card">
+        <section class="section-card tecnologies">
             <div class="card-header">
                 <h2>Tecologias</h2> <a href="#page-header">Voltar</a>
             </div>
             <div class="card-body">
                 <div class="tecnology-list">
                     <ul>
-                        <li class="tecnology-card" id="card-html"><h3>HTML 5</h3></li>
-                        <li class="tecnology-card" id="card-css"><h3>CSS</h3></li>
-                        <li class="tecnology-card" id="card-javascript"><h3>Javascript</h3></li>
-                        <li class="tecnology-card" id="card-php"><h3>PHP</h3></li>
+                        <li class="tecnology-card" id="card-html">
+                            <h3>HTML 5</h3>
+                        </li>
+                        <li class="tecnology-card" id="card-css">
+                            <h3>CSS</h3>
+                        </li>
+                        <li class="tecnology-card" id="card-javascript">
+                            <h3>Javascript</h3>
+                        </li>
+                        <li class="tecnology-card" id="card-php">
+                            <h3>PHP</h3>
+                        </li>
                     </ul>
                 </div>
                 <div class="tecnology-brief">
@@ -87,21 +99,27 @@
                         HTML é a linguagem de marcação de texto utilizada para dar conteúdo ao seu site!
                     </div>
                     <div class="tecnology-content" id="css-content">
-                        O CSS é a tecnologia utilziada para deixar seu site mais interativo e estiloso, com o design que for melhor pra você!
+                        O CSS é a tecnologia utilziada para deixar seu site mais interativo e estiloso, com o design que
+                        for melhor pra você!
                         <br><br>
-                        Aqui também faço uso do SCSS e do SASS, comumente conhecidos como "CSS com super poderes" para potencializar ainda mais a criação de estilos.
+                        Aqui também faço uso do SCSS e do SASS, comumente conhecidos como "CSS com super poderes" para
+                        potencializar ainda mais a criação de estilos.
                     </div>
                     <div class="tecnology-content" id="javascript-content">
                         O Javascript é hoje em dia a tecnologia mais utilizada para web.
                         <br>
-                        Este é responsável por aprimorar a experiência interativa do usuário com a página, e adicionar todas as funcionalidades que a aplicação exige como interações e cálculos.
+                        Este é responsável por aprimorar a experiência interativa do usuário com a página, e adicionar
+                        todas as funcionalidades que a aplicação exige como interações e cálculos.
                     </div>
                     <div class="tecnology-content" id="php-content">
-                        PHP é uma linguagem especializada para o back-end, ou seja, é utilizado para desenvolver funcionalidades que estarão "por baixo dos panos".
+                        PHP é uma linguagem especializada para o back-end, ou seja, é utilizado para desenvolver
+                        funcionalidades que estarão "por baixo dos panos".
                         <br><br>
-                        No back-end são tratadas questões como a segurança da sua aplicação, relacionamento com banco de dados, dentre outros.
+                        No back-end são tratadas questões como a segurança da sua aplicação, relacionamento com banco de
+                        dados, dentre outros.
                         <br><br>
-                        Com o PHP também utilizo tecnologias como Doctrine ORM para melhorar o contato com o banco de dados, além do framework Laravel.
+                        Com o PHP também utilizo tecnologias como Doctrine ORM para melhorar o contato com o banco de
+                        dados, além do framework Laravel.
                     </div>
                 </div>
             </div>

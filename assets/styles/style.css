@@ -15,6 +15,7 @@ body {
 #navbar-main {
   display: flex;
   font-family: "Quando", serif;
+  position: fixed;
 }
 #navbar-main a {
   text-decoration: none;
@@ -34,7 +35,7 @@ body {
   color: rgb(238, 235, 221);
 }
 #navbar-main ul {
-  height: 100%;
+  height: 1000%;
   width: 55%;
   position: fixed;
   left: -100%;
@@ -44,7 +45,6 @@ body {
 }
 #navbar-main ul li {
   position: relative;
-  top: 20%;
   font-size: 2rem;
   margin-bottom: 3rem;
 }
@@ -55,150 +55,52 @@ body {
   align-self: center;
   position: relative;
   text-transform: uppercase;
-}
-
-#start {
-  display: flex;
-}
-#start .start-content {
-  width: 50%;
-  padding: 1rem;
-}
-#start .start-content p {
-  position: relative;
-  top: 25%;
-  transform: translateY(-50%);
-  font-size: 21px;
-}
-#start .left-content {
-  width: 40%;
-  text-align: center;
-}
-#start .right-content p {
-  width: 80%;
-}
-
-#sobre-mim .sobre-mim-content {
-  position: relative;
-  top: 10rem;
-  width: 50%;
+  font-size: 24px;
 }
 
 .section-card {
-  font-family: "Quando", serif;
   min-height: 100vh;
-}
-.section-card .card-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
+  padding: 1rem;
 }
 .section-card .card-header h2 {
-  text-align: center;
+  font-size: 40px;
 }
 .section-card .card-header a {
-  color: rgb(238, 235, 221);
+  font-size: 25px;
+  color: rgb(27, 23, 23);
+  background: rgb(238, 235, 221);
   text-decoration: none;
   padding: 0.25rem 0.5rem;
   border-radius: 15px;
+}
+.section-card p {
+  font-size: 25px;
+}
+
+.start {
+  display: flex;
+  flex-direction: column;
   position: relative;
-  justify-self: flex-end;
+  top: 20vh;
 }
-.section-card .card-header a:hover {
-  background: rgb(238, 235, 221);
-  color: rgb(27, 23, 23);
+.start .start-content p {
+  font-size: 30px;
 }
-.section-card .card-body {
-  padding: 0.5rem;
+
+.tecnologies .card-body {
+  margin-top: 5rem;
   display: flex;
 }
-.section-card .card-body .tecnology-list {
-  width: 50%;
-}
-.section-card .card-body .tecnology-list ul {
-  padding: 0;
-  position: relative;
-}
-.section-card .card-body .tecnology-list ul .tecnology-card {
+.tecnologies .card-body .tecnology-list {
+  width: 100%;
   display: flex;
-  align-items: center;
-  height: 40px;
-  width: 37rem;
-  border-radius: 15px;
-  margin-bottom: 1rem;
-  padding: 0.5rem 1.5rem;
-  position: relative;
-  background-color: rgb(27, 23, 23);
+  justify-content: center;
 }
-.section-card .card-body .tecnology-list ul .tecnology-card:hover::before {
-  height: 100%;
-  width: 100%;
-  content: "";
-  position: absolute;
-  left: -3px;
-  top: 3px;
-  z-index: -1;
-  border-radius: 15px;
-  background: white;
-  margin: 0;
+.tecnologies .card-body .tecnology-list ul {
+  list-style: none;
   padding: 0;
 }
-.section-card .card-body .tecnology-list ul .tecnology-card:hover::after {
-  height: 100%;
-  width: 100%;
-  content: "";
-  position: absolute;
-  left: 3px;
-  top: -3px;
-  z-index: -1;
-  border-radius: 15px;
-  margin: 0;
-  padding: 0;
-}
-.section-card .card-body .tecnology-list ul #card-html:hover {
-  border-top: 1px solid rgb(206, 18, 18);
-  text-shadow: 0 0 3px rgb(206, 18, 18);
-  color: rgb(206, 18, 18);
-}
-.section-card .card-body .tecnology-list ul #card-html::before {
-  background: rgb(206, 18, 18);
-  box-shadow: -1px 1px 3px rgb(206, 18, 18);
-}
-.section-card .card-body .tecnology-list ul #card-css:hover {
-  border-top: 1px solid rgb(152, 193, 217);
-  text-shadow: 0 0 3px rgb(152, 193, 217);
-  color: rgb(152, 193, 217);
-}
-.section-card .card-body .tecnology-list ul #card-css::before {
-  background: rgb(152, 193, 217);
-  box-shadow: -1px 1px 3px rgb(152, 193, 217);
-}
-.section-card .card-body .tecnology-list ul #card-javascript:hover {
-  border-top: 1px solid rgb(245, 131, 1);
-  text-shadow: 0 0 3px rgb(245, 131, 1);
-  color: rgb(245, 131, 1);
-}
-.section-card .card-body .tecnology-list ul #card-javascript::before {
-  background: rgb(245, 131, 1);
-  box-shadow: -1px 1px 3px rgb(245, 131, 1);
-}
-.section-card .card-body .tecnology-list ul #card-php:hover {
-  border-top: 1px solid rgb(171, 0, 255);
-  text-shadow: 0 0 3px rgb(171, 0, 255);
-  color: rgb(171, 0, 255);
-}
-.section-card .card-body .tecnology-list ul #card-php::before {
-  background: rgb(171, 0, 255);
-  box-shadow: -1px 1px 3px rgb(171, 0, 255);
-}
-.section-card .card-body .tecnology-brief {
-  width: 46%;
-  height: 80vh;
-  border-radius: 15px;
-  padding: 1rem;
-  position: relative;
-  right: 1.5%;
-}
-.section-card .card-body .tecnology-brief .tecnology-content {
+.tecnologies .card-body .tecnology-brief {
   display: none;
 }/*# sourceMappingURL=style.css.map */
