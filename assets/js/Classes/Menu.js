@@ -13,10 +13,10 @@ handle()
 
         if(!this.list.classList.contains('active')){
             this.list.classList.add('active');
-            console.log('acerto')
+            console.log('acerto', this.list);
         } else{
             this.list.classList.remove('active');
-            console.log('removeu');
+            console.log('removeu', this.list);
         }
     })
 }

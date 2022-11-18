@@ -1,60 +1,75 @@
 @import '../abstract/_variables.scss';
 
+.nav-container {
 
-#navbar-main{
     display: flex;
     font-family: $font-primary;
     position: fixed;
-    a{
+
+    a {
         text-decoration: none;
         color: $color-quinary;
     }
 
-
-    button{
+    button {
         height: 3rem;
         width: 3rem;
         margin: 1rem .5rem;
         background: transparent;
         border: none;
         z-index: 2;
-        i{
+
+        i {
             text-align: center;
             font-size: 2.5rem;
             color: $color-quinary;
         }
     }
 
-
-    ul{
-        height: 1000%;
-        width: 55%;
+    .navbar-main {
+        background: rgba($color: #000000, $alpha: 0.3);
+        height: 100vh;
+        width: 70%;
+        padding: 1rem;
         position: fixed;
         left: -100%;
-        padding: 2rem 1rem;
-        list-style: none;
+
         transition: .1s ease-out;
+        ul {
 
-
-        li{
             position: relative;
-            font-size: 2rem;
-            margin-bottom: 3rem;
+            top: 20%;
 
+            list-style: square;
+
+
+
+            li {
+                position: relative;
+                font-size: 2rem;
+                margin-bottom: 3rem;
+
+            }
         }
+
+
+
+
     }
 
-    .active{
-        left:0;
+    .active {
+        left: 0;
     }
 
-    h1{
+    h1 {
         align-self: center;
         position: relative;
         text-transform: uppercase;
         font-size: $font-size-title;
     }
 }
+
+
 
 
 

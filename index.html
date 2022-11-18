@@ -17,22 +17,30 @@
 <body>
     <header id="page-header">
         <div id="trigger"></div>
-        <nav id="navbar-main">
 
-            <button id="menu-trigger"><i class="fa-regular fa-bars"></i></button>
+        <section class="nav-container">
+            <nav id="navbar-main" class="navbar-main">
+                <ul id="navbar-list">
+                    <li><a href="#trigger">Início</a></li>
+                    <li><a href="#sobre-mim">Sobre mim</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#tecnologias">Tecnologias</a></li>
+                </ul>
+            </nav>
 
-            <ul id="navbar-list">
-                <li><a href="#trigger">Início</a></li>
-                <li><a href="#sobre-mim">Sobre mim</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#tecnologias">Tecnologias</a></li>
-            </ul>
+            <button type="button" id="menu-trigger">
+                <i class="fa-regular fa-bars"></i>
+            </button>
+            
+
 
             <h1><a href="#page-header">Lucas Albuquerque</a></h1>
-        </nav>
+        </section>
+
+
 
     </header>
-    <main id="main-content">
+     <main id="main-content">
 
         <section class="section-card start">
             <div class="left-content start-content">
@@ -128,7 +136,7 @@
     </main>
     <footer>
 
-    </footer> -->
+    </footer>
     <script type="module" src="assets/js/app.js"></script>
 </body>
 
