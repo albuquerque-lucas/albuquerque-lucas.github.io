@@ -1,6 +1,8 @@
-import Menu from "./Classes/Menu";
+import {Menu} from './Classes/Menu.js'
 
-const menu = new Menu();
+const navbarMenu = document.querySelector('#navbar-list');
+
+const menu = new Menu(navbarMenu);
 
 menu.handle();
 

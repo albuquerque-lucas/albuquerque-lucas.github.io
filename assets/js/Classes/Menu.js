@@ -1,10 +1,14 @@
-export default class Menu {
+export class Menu{
 
+    constructor(list){
+        this.list = list;
+    }
 
 
 handle()
 {
-    console.log('Olá Mundo!');
+    this.list.innerHtml = "Ola";
+
 }
 
 
