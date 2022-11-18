@@ -13,40 +13,37 @@ body {
 }
 
 #navbar-main {
-  font-family: "Quando", serif;
-  width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-  height: 5rem;
-  margin: 0;
-  padding: 0;
-  border-bottom: 2px solid rgb(238, 235, 221);
 }
-#navbar-main a {
+#navbar-main button {
+  height: 3rem;
+  width: 3rem;
+  margin: 1rem 0.5rem;
+  background: transparent;
+  border: none;
+}
+#navbar-main button i {
+  text-align: center;
+  font-size: 2.5rem;
   color: rgb(238, 235, 221);
-  text-decoration: none;
 }
 #navbar-main ul {
-  margin: 0;
-  padding: 0.5rem 1rem;
-  display: flex;
-  justify-content: center;
+  height: 100%;
+  width: 55%;
+  position: fixed;
+  padding: 2rem 1rem;
   list-style: none;
+  background-color: lightcoral;
+}
+#navbar-main ul li {
+  position: relative;
+  top: 20%;
+  font-size: 2rem;
+  margin-bottom: 3rem;
 }
 #navbar-main ul li a {
-  margin: 0.25rem 1rem;
-  padding: 0.25rem 0.5rem;
-  border-radius: 15px;
-  font-size: 16px;
-  margin: 0.25rem 1rem;
-  padding: 0.25rem 0.5rem;
-  border-radius: 15px;
-  font-size: 16px;
-}
-#navbar-main ul li a:hover {
-  background: rgb(238, 235, 221);
-  color: rgb(30, 33, 36);
+  text-decoration: none;
+  color: rgb(238, 235, 221);
 }
 
 #start {

@@ -1,47 +1,94 @@
 @import '../abstract/_variables.scss';
 
 
-#navbar-main {
-    font-family: $font-primary;
-    width: 100%;
+#navbar-main{
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: $size-navbar;
-    margin: 0;
-    padding: 0;
-    border-bottom: 2px solid $color-quinary;
 
-    a {
-        color: $color-quinary;
-        text-decoration: none;
+
+
+    button{
+        height: 3rem;
+        width: 3rem;
+        margin: 1rem .5rem;
+        background: transparent;
+        border: none;
+        i{
+            text-align: center;
+            font-size: 2.5rem;
+            color: $color-quinary;
+        }
     }
 
-    ul {
-        margin: 0;
-        padding: .5rem 1rem;
-        display: flex;
-        justify-content: center;
+
+    ul{
+        height: 100%;
+        width: 55%;
+        position: fixed;
+        padding: 2rem 1rem;
         list-style: none;
-
-        li {
-
-            a {
-                margin: .25rem 1rem;
-                padding: .25rem .5rem;
-                border-radius: 15px;
-                font-size: $font-size-navbar-desktop;
-                margin: .25rem 1rem;
-                padding: .25rem .5rem;
-                border-radius: 15px;
-                font-size: $font-size-navbar-desktop;
-
-                &:hover {
-                    background: $color-quinary;
-                    color: $color-secondary;
-                }
+        background-color: lightcoral;
+        li{
+            position: relative;
+            top: 20%;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            a{
+                text-decoration: none;
+                color: $color-quinary;
             }
-
         }
     }
 }
+
+
+
+
+
+
+
+
+
+// #navbar-main {
+//     font-family: $font-primary;
+//     width: 100%;
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-around;
+//     height: $size-navbar;
+//     margin: 0;
+//     padding: 0;
+//     border-bottom: 2px solid $color-quinary;
+
+//     a {
+//         color: $color-quinary;
+//         text-decoration: none;
+//     }
+
+//     ul {
+//         margin: 0;
+//         padding: .5rem 1rem;
+//         display: flex;
+//         justify-content: center;
+//         list-style: none;
+
+//         li {
+
+//             a {
+//                 margin: .25rem 1rem;
+//                 padding: .25rem .5rem;
+//                 border-radius: 15px;
+//                 font-size: $font-size-navbar-desktop;
+//                 margin: .25rem 1rem;
+//                 padding: .25rem .5rem;
+//                 border-radius: 15px;
+//                 font-size: $font-size-navbar-desktop;
+
+//                 &:hover {
+//                     background: $color-quinary;
+//                     color: $color-secondary;
+//                 }
+//             }
+
+//         }
+//     }
+// }
