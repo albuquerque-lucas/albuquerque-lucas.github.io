@@ -1,7 +1,7 @@
 @import '../abstract/_variables.scss';
 
 
-#navbar-main{
+#navbar-main {
     font-family: $font-primary;
     width: 100%;
     display: flex;
@@ -11,28 +11,32 @@
     margin: 0;
     padding: 0;
     border-bottom: 2px solid $color-quinary;
-    a{
+
+    a {
         color: $color-quinary;
         text-decoration: none;
     }
-    ul{
+
+    ul {
         margin: 0;
         padding: .5rem 1rem;
         display: flex;
         justify-content: center;
         list-style: none;
-        li{
 
-            a{
-                margin: .25rem 1rem;
-                padding: .25rem .5rem;
-                border-radius: 15px;
-                font-size: $font-size-navbar-desktop;            
+        li {
+
+            a {
                 margin: .25rem 1rem;
                 padding: .25rem .5rem;
                 border-radius: 15px;
                 font-size: $font-size-navbar-desktop;
-                &:hover{
+                margin: .25rem 1rem;
+                padding: .25rem .5rem;
+                border-radius: 15px;
+                font-size: $font-size-navbar-desktop;
+
+                &:hover {
                     background: $color-quinary;
                     color: $color-secondary;
                 }
