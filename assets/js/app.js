@@ -1,8 +1,9 @@
 import {Menu} from './Classes/Menu.js'
 
 const navbarMenu = document.querySelector('#navbar-list');
+const trigger = document.querySelector('#menu-trigger');
 
-const menu = new Menu(navbarMenu);
+const menu = new Menu(navbarMenu, trigger);
 
 menu.handle();
 

@@ -14,6 +14,11 @@ body {
 
 #navbar-main {
   display: flex;
+  font-family: "Quando", serif;
+}
+#navbar-main a {
+  text-decoration: none;
+  color: rgb(238, 235, 221);
 }
 #navbar-main button {
   height: 3rem;
@@ -21,6 +26,7 @@ body {
   margin: 1rem 0.5rem;
   background: transparent;
   border: none;
+  z-index: 2;
 }
 #navbar-main button i {
   text-align: center;
@@ -31,9 +37,10 @@ body {
   height: 100%;
   width: 55%;
   position: fixed;
+  left: -100%;
   padding: 2rem 1rem;
   list-style: none;
-  background-color: lightcoral;
+  transition: 0.1s ease-out;
 }
 #navbar-main ul li {
   position: relative;
@@ -41,9 +48,13 @@ body {
   font-size: 2rem;
   margin-bottom: 3rem;
 }
-#navbar-main ul li a {
-  text-decoration: none;
-  color: rgb(238, 235, 221);
+#navbar-main .active {
+  left: 0;
+}
+#navbar-main h1 {
+  align-self: center;
+  position: relative;
+  text-transform: uppercase;
 }
 
 #start {
