@@ -19,11 +19,23 @@
             left: 0;
             background-color: transparent;
             ul{
+                width: 100%;
                 top: 0;
                 display: flex;
+                justify-content: center;
                 li{
-                    margin-right: 1rem;
-                    font-size: $font-size-navbar-desktop * 1.5;
+                    margin-right: 2rem;
+                    font-size: $font-size-navbar-desktop * 1.2;
+                    a{
+                        padding: .25rem .5rem;
+                        border-radius: 15px;
+                        transition: .1s ease-out;
+                        &:hover{
+                            background: $color-quinary;
+                            color: $color-primary;
+
+                        }
+                    }
                 }
             }
         }

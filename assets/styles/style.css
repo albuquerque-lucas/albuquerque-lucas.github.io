@@ -132,12 +132,23 @@ body {
     background-color: transparent;
   }
   .nav-container .navbar-main ul {
+    width: 100%;
     top: 0;
     display: flex;
+    justify-content: center;
   }
   .nav-container .navbar-main ul li {
-    margin-right: 1rem;
-    font-size: 24px;
+    margin-right: 2rem;
+    font-size: 19.2px;
+  }
+  .nav-container .navbar-main ul li a {
+    padding: 0.25rem 0.5rem;
+    border-radius: 15px;
+    transition: 0.1s ease-out;
+  }
+  .nav-container .navbar-main ul li a:hover {
+    background: rgb(238, 235, 221);
+    color: rgb(27, 23, 23);
   }
   .nav-container h1 {
     width: 30%;
