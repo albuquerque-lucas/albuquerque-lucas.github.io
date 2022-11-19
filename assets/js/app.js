@@ -1,6 +1,6 @@
 import {Menu} from './Classes/Menu.js'
 
-const navbarMenu = document.querySelector('#navbar-main');
+const navbarMenu = document.querySelector('#navbar');
 const trigger = document.querySelector('#menu-trigger');
 
 const menu = new Menu(navbarMenu, trigger);
