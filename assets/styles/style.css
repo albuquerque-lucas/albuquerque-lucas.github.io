@@ -198,50 +198,51 @@ body #main-content {
   .tecnologies .card-body .tecnology-list {
     justify-content: flex-start;
     width: 100%;
-    background: lightcoral;
   }
   .tecnologies .card-body .tecnology-list ul {
-    width: 93%;
+    width: 90%;
   }
   .tecnologies .card-body .tecnology-list ul .tecnology-card {
     width: 100%;
     display: flex;
     align-items: center;
+    border: 1px solid transparent;
     border-radius: 15px;
     margin-bottom: 1rem;
     padding: 0.5rem 1.5rem;
-    position: relative;
     background-color: rgb(27, 23, 23);
+    margin-bottom: 1rem;
+    padding: 0.5rem 1.5rem;
   }
-  .tecnologies .card-body .tecnology-list ul .tecnology-card:hover::before {
-    height: 100%;
-    width: 100%;
-    content: "";
-    position: absolute;
-    left: -3px;
-    top: 3px;
-    z-index: -1;
-    border-radius: 15px;
-    background: white;
-    margin: 0;
-    padding: 0;
+  .tecnologies .card-body #card-html:hover {
+    border: 1px solid rgb(206, 18, 18);
+    text-shadow: 0 0 3px rgb(206, 18, 18);
+    color: rgb(206, 18, 18);
   }
-  .tecnologies .card-body .tecnology-list ul .tecnology-card:hover::after {
-    height: 100%;
-    width: 100%;
-    content: "";
-    position: absolute;
-    left: 3px;
-    top: -3px;
-    z-index: -1;
-    border-radius: 15px;
-    margin: 0;
-    padding: 0;
+  .tecnologies .card-body #card-css:hover {
+    border: 1px solid rgb(152, 193, 217);
+    text-shadow: 0 0 3px rgb(152, 193, 217);
+    color: rgb(152, 193, 217);
+  }
+  .tecnologies .card-body #card-javascript:hover {
+    border: 1px solid rgb(245, 131, 1);
+    text-shadow: 0 0 3px rgb(245, 131, 1);
+    color: rgb(245, 131, 1);
+  }
+  .tecnologies .card-body #card-php:hover {
+    border: 1px solid rgb(171, 0, 255);
+    text-shadow: 0 0 3px rgb(171, 0, 255);
+    color: rgb(171, 0, 255);
+  }
+  .tecnologies .card-body #card-php::before {
+    background: rgb(171, 0, 255);
+    box-shadow: 1px 43px 54px rgb(171, 0, 255);
   }
   .tecnologies .card-body .tecnology-brief {
-    background: lightblue;
     width: 60vw;
     display: block;
+    padding: 1rem 2rem;
+    border-radius: 15px;
   }
   .tecnologies .card-body .tecnology-brief .tecnology-content {
     display: none;
