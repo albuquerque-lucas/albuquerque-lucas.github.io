@@ -1,0 +1,45 @@
+@import '../abstract/_variables.scss';
+
+
+@media(min-width:1024px){
+
+    .section-card{
+        .card-header{
+            text-align: center;
+        }
+    }
+    
+    .start{
+        top: 0;
+        flex-direction: row;
+        align-items: center;
+        padding: 1rem 3rem;
+
+        .start-content{
+            padding: 1rem;
+        }
+
+        .left-content{
+            width: 40%;
+        }
+    
+        .right-content{
+            text-align: start;
+            width: 40%;
+        }
+    }
+
+    .about-me{
+        
+        width: 55%;
+        text-align: center;
+
+    }
+
+
+    .tecnologies{
+        
+    }
+
+}
+

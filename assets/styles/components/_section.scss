@@ -4,7 +4,7 @@
 
 
 .section-card{
-    min-height: 100vh;
+    height: 100vh;
     text-align:center;
     padding: 1rem;
     .card-header{
@@ -27,6 +27,7 @@
 }
 
 .start{
+    height: 90vh;
     display: flex;
     flex-direction: column;
     position: relative;
