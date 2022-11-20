@@ -187,4 +187,63 @@ body #main-content {
     width: 55%;
     text-align: center;
   }
+  .tecnologies {
+    padding: 0;
+    margin: 0;
+    text-align: start;
+  }
+  .tecnologies .card-body {
+    display: flex;
+  }
+  .tecnologies .card-body .tecnology-list {
+    justify-content: flex-start;
+    width: 100%;
+    background: lightcoral;
+  }
+  .tecnologies .card-body .tecnology-list ul {
+    width: 93%;
+  }
+  .tecnologies .card-body .tecnology-list ul .tecnology-card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1.5rem;
+    position: relative;
+    background-color: rgb(27, 23, 23);
+  }
+  .tecnologies .card-body .tecnology-list ul .tecnology-card:hover::before {
+    height: 100%;
+    width: 100%;
+    content: "";
+    position: absolute;
+    left: -3px;
+    top: 3px;
+    z-index: -1;
+    border-radius: 15px;
+    background: white;
+    margin: 0;
+    padding: 0;
+  }
+  .tecnologies .card-body .tecnology-list ul .tecnology-card:hover::after {
+    height: 100%;
+    width: 100%;
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: -3px;
+    z-index: -1;
+    border-radius: 15px;
+    margin: 0;
+    padding: 0;
+  }
+  .tecnologies .card-body .tecnology-brief {
+    background: lightblue;
+    width: 60vw;
+    display: block;
+  }
+  .tecnologies .card-body .tecnology-brief .tecnology-content {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
