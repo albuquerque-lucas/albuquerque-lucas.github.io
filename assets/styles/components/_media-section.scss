@@ -6,6 +6,16 @@
     .section-card {
         .card-header {
             text-align: center;
+            margin-bottom: 5rem;
+            a{
+                color: $color-quinary;
+                background: $color-primary;
+                transition: .1s ease-out;
+                &:hover{
+                    color: $color-primary;
+                    background: $color-quinary;
+                }
+            }
         }
     }
 

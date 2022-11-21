@@ -166,6 +166,16 @@ body #main-content {
 @media (min-width: 1024px) {
   .section-card .card-header {
     text-align: center;
+    margin-bottom: 5rem;
+  }
+  .section-card .card-header a {
+    color: rgb(238, 235, 221);
+    background: rgb(27, 23, 23);
+    transition: 0.1s ease-out;
+  }
+  .section-card .card-header a:hover {
+    color: rgb(27, 23, 23);
+    background: rgb(238, 235, 221);
   }
   .start {
     top: 0;
