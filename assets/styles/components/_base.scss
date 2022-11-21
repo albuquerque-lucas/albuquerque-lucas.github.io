@@ -12,4 +12,10 @@ body{
     color: $color-quinary;
     margin: 0;
     padding: 0;
+
+    #main-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }

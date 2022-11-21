@@ -1,0 +1,20 @@
+{
+  "name": "albuquerque-lucas.github.io",
+  "version": "1.0.0",
+  "description": "Meu portfólio web, atualmente utilizado como prática para o conteúdo aprendido na Trybe.",
+  "main": "./assets/js/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albuquerque-lucas/albuquerque-lucas.github.io.git"
+  },
+  "author": "Lucas Albuquerque",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/albuquerque-lucas/albuquerque-lucas.github.io/issues"
+  },
+  "homepage": "https://github.com/albuquerque-lucas/albuquerque-lucas.github.io#readme"
+}

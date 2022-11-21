@@ -1,0 +1,112 @@
+@import '../abstract/_variables.scss';
+
+
+@media(min-width:956px){
+
+    .nav-container{
+        display: flex;
+        flex-direction: row-reverse;
+        button{
+            display: none;
+        }
+
+        .navbar-main{
+            display: flex;
+            justify-content: center;
+            height: 10vh;
+            width: 70%;
+            position: relative;
+            left: 0;
+            background-color: transparent;
+            ul{
+                width: 100%;
+                top: 0;
+                display: flex;
+                justify-content: center;
+                li{
+                    margin-right: 2rem;
+                    font-size: $font-size-navbar-desktop * 1.2;
+                    a{
+                        padding: .25rem .5rem;
+                        border-radius: 15px;
+                        transition: .1s ease-out;
+                        &:hover{
+                            background: $color-quinary;
+                            color: $color-primary;
+
+                        }
+                    }
+                }
+            }
+        }
+
+        h1{
+            width: 30%;
+            align-self: flex-start;
+            left: 3%;
+            padding: 1rem;
+        }
+
+    }
+}
+
+
+// .nav-container {
+
+//     display: flex;
+//     font-family: $font-primary;
+
+//     a {
+//         text-decoration: none;
+//         color: $color-quinary;
+//     }
+
+//     button {
+//         height: 3rem;
+//         width: 3rem;
+//         margin: 1rem .5rem;
+//         background: transparent;
+//         border: none;
+//         z-index: 2;
+//         position: fixed;
+//         cursor: pointer;
+
+//         i {
+//             text-align: center;
+//             font-size: 2.5rem;
+//             color: $color-quinary;
+//         }
+//     }
+
+//     .navbar-main {
+//         display: flex;
+//         background: rgba($color: #000000, $alpha: 0.8);
+//         height: 100vh;
+//         width: 70%;
+//         padding: 1rem;
+//         position: fixed;
+//         left: -100%;
+//         transition: .1s ease-out;
+//         z-index: 2;
+//         ul {
+//             list-style: none;
+//             padding: 1rem;
+//             li {
+//                 font-size: 2rem;
+//                 margin-bottom: 3rem;
+//             }
+//         }
+//     }
+
+//     .active {
+//         left: 0;
+//     }
+
+//     h1 {
+//         align-self: center;
+//         position: relative;
+//         left: 4.5rem;
+//         text-transform: uppercase;
+//         font-size: $font-size-title;
+//     }
+// }
