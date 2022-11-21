@@ -46,9 +46,8 @@ export class TecnogyHoverEffect {
             this.tecnologyBrief.style.border = `${borderThickness} solid ${color}`;
             this.tecnologyBrief.style.borderLeft = 'none';
             content.style.display = 'block';
-            console.log('acertou')
         } else{
-            console.log('nada feito')
+            console.log('Não foi possível alterar as propriedades.')
         }
     }
 
