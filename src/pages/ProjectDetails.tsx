@@ -41,47 +41,47 @@ export function ProjectDetails() {
 
   return (
     <section className="py-2 sm:py-4">
-      <Link to="/" className="text-sm text-slate-500 hover:text-slate-800">
+      <Link to="/" className="text-sm font-medium text-slate-700 hover:text-slate-900">
         {'<-'} {labels.buttons.backToProjects}
       </Link>
 
       <article className="mt-6 max-w-4xl space-y-8">
         <header>
-          <p className="text-sm text-slate-500">{project.year}</p>
+          <p className="text-sm font-semibold text-slate-700">{project.year}</p>
           <h1 className="mt-2 text-3xl font-semibold tracking-tight text-slate-900">{productName}</h1>
           <div className="mt-3">
             <ClientBadge clientName={clientName} />
           </div>
-          {subtitle && <p className="mt-2 text-sm text-slate-500">{subtitle}</p>}
-          <p className="mt-4 text-base leading-relaxed text-slate-700">{excerpt}</p>
+          {subtitle && <p className="mt-2 text-sm text-slate-700">{subtitle}</p>}
+          <p className="mt-4 text-base leading-relaxed text-slate-800">{excerpt}</p>
           <div className="mt-5 flex flex-wrap gap-2">
             {project.stack.map((item) => (
-              <span key={item} className="rounded-full bg-slate-200 px-3 py-1 text-xs font-medium text-slate-700">{item}</span>
+              <span key={item} className="rounded-full border border-slate-300 bg-slate-200 px-3 py-1 text-xs font-medium text-slate-700">{item}</span>
             ))}
           </div>
         </header>
 
         <section className="space-y-6">
           <div>
-            <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500">{labels.sections.problem}</h2>
-            <p className="mt-2 whitespace-pre-line text-sm leading-relaxed text-slate-700">{problem}</p>
+            <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-900">{labels.sections.problem}</h2>
+            <p className="mt-2 whitespace-pre-line text-sm leading-relaxed text-slate-800">{problem}</p>
           </div>
           <div>
-            <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500">{labels.sections.solution}</h2>
-            <p className="mt-2 text-sm leading-relaxed text-slate-700">{solution}</p>
+            <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-900">{labels.sections.solution}</h2>
+            <p className="mt-2 text-sm leading-relaxed text-slate-800">{solution}</p>
           </div>
           <div>
-            <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500">{labels.sections.architecture}</h2>
+            <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-900">{labels.sections.architecture}</h2>
             <div className="mt-3 grid gap-4 sm:grid-cols-2">
               {architectureSections.map((section) => {
                 if (!section.items || section.items.length === 0) return null
                 return (
-                  <div key={section.label} className="space-y-2">
+                  <div key={section.label} className="space-y-2 border-l-2 border-slate-300 pl-3">
                     <h3 className="text-sm font-medium text-slate-900">{section.label}</h3>
-                    <ul className="space-y-1.5 text-sm text-slate-700">
+                    <ul className="space-y-1.5 text-sm text-slate-800">
                       {section.items.map((item) => (
                         <li key={item} className="flex items-start gap-2">
-                          <span aria-hidden className="mt-2 h-1.5 w-1.5 rounded-full bg-slate-400" />
+                          <span aria-hidden className="mt-2 h-1.5 w-1.5 rounded-full bg-slate-500" />
                           <span>{item}</span>
                         </li>
                       ))}
@@ -92,11 +92,11 @@ export function ProjectDetails() {
             </div>
           </div>
           <div>
-            <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500">{labels.sections.results}</h2>
-            <ul className="mt-3 space-y-1.5 text-sm text-slate-700">
+            <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-900">{labels.sections.results}</h2>
+            <ul className="mt-3 space-y-1.5 text-sm text-slate-800">
               {results.map((result) => (
                 <li key={result} className="flex items-start gap-2">
-                  <span aria-hidden className="mt-2 h-1.5 w-1.5 rounded-full bg-slate-400" />
+                  <span aria-hidden className="mt-2 h-1.5 w-1.5 rounded-full bg-slate-500" />
                   <span>{result}</span>
                 </li>
               ))}
