@@ -1,5 +1,6 @@
 import { Link, useParams } from 'react-router-dom'
 
+import { ClientBadge } from '../components/ClientBadge'
 import { projects } from '../data/projects'
 import { getTranslated } from '../i18n/helpers'
 import { useI18n } from '../i18n/I18nProvider'
@@ -21,7 +22,8 @@ export function ProjectDetails() {
     )
   }
 
-  const title = getTranslated(project.title, locale)
+  const productName = getTranslated(project.productName, locale)
+  const clientName = getTranslated(project.clientName, locale)
   const subtitle = project.subtitle ? getTranslated(project.subtitle, locale) : undefined
   const excerpt = getTranslated(project.excerpt, locale)
   const problem = getTranslated(project.caseStudy.problem, locale)
@@ -46,7 +48,10 @@ export function ProjectDetails() {
       <article className="mt-6 max-w-4xl space-y-8">
         <header>
           <p className="text-sm text-slate-500">{project.year}</p>
-          <h1 className="mt-2 text-3xl font-semibold tracking-tight text-slate-900">{title}</h1>
+          <h1 className="mt-2 text-3xl font-semibold tracking-tight text-slate-900">{productName}</h1>
+          <div className="mt-3">
+            <ClientBadge clientName={clientName} />
+          </div>
           {subtitle && <p className="mt-2 text-sm text-slate-500">{subtitle}</p>}
           <p className="mt-4 text-base leading-relaxed text-slate-700">{excerpt}</p>
           <div className="mt-5 flex flex-wrap gap-2">

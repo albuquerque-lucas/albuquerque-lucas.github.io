@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { ArrowUpRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
+import { ClientBadge } from './ClientBadge'
 import type { Project } from '../data/projects'
 import { getTranslated } from '../i18n/helpers'
 import { useI18n } from '../i18n/I18nProvider'
@@ -10,7 +11,8 @@ type ProjectCardProps = { project: Project }
 
 export function ProjectCard({ project }: ProjectCardProps) {
   const { locale, labels } = useI18n()
-  const title = getTranslated(project.title, locale)
+  const productName = getTranslated(project.productName, locale)
+  const clientName = getTranslated(project.clientName, locale)
   const excerpt = getTranslated(project.excerpt, locale)
   const highlights = getTranslated(project.highlights, locale).slice(0, 3)
 
@@ -23,15 +25,20 @@ export function ProjectCard({ project }: ProjectCardProps) {
     >
       <Link
         to={`/projects/${project.slug}`}
-        aria-label={`${labels.a11y.openProject}: ${title}`}
+        aria-label={`${labels.a11y.openProject}: ${productName}`}
         className="block cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2"
       >
         <p className="text-xs font-medium uppercase tracking-wide text-slate-500">{project.year}</p>
         <div className="mt-3 grid gap-6 md:grid-cols-[minmax(0,1fr)_auto] md:items-start">
           <div>
             <div className="flex items-start justify-between gap-4">
-              <h3 className="text-xl font-semibold tracking-tight text-slate-900 transition-colors group-hover:text-brand-600 group-focus-within:text-brand-600">{title}</h3>
+              <h3 className="text-xl font-semibold tracking-tight text-slate-900 transition-colors group-hover:text-brand-600 group-focus-within:text-brand-600">
+                {productName}
+              </h3>
               <ArrowUpRight aria-hidden className="h-4 w-4 shrink-0 text-slate-400 transition group-hover:text-slate-700 md:hidden" />
+            </div>
+            <div className="mt-2">
+              <ClientBadge clientName={clientName} />
             </div>
             <p className="mt-3 text-sm leading-relaxed text-slate-600">{excerpt}</p>
             <ul className="mt-4 space-y-1.5 text-sm text-slate-600">

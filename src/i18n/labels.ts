@@ -21,6 +21,7 @@ export type Labels = {
   states: { projectNotFoundTitle: string; projectNotFoundDescription: string }
   footer: { rightsReserved: string }
   a11y: { openProject: string }
+  common: { clientLabel: string }
 }
 
 export const labels: Translated<Labels> = {
@@ -35,6 +36,7 @@ export const labels: Translated<Labels> = {
     states: { projectNotFoundTitle: 'Projeto nao encontrado', projectNotFoundDescription: 'O projeto solicitado nao existe.' },
     footer: { rightsReserved: 'Todos os direitos reservados.' },
     a11y: { openProject: 'Abrir projeto' },
+    common: { clientLabel: 'Cliente' },
   },
   'en-US': {
     nav: { github: 'GitHub', linkedin: 'LinkedIn', email: 'Email' },
@@ -47,5 +49,6 @@ export const labels: Translated<Labels> = {
     states: { projectNotFoundTitle: 'Project not found', projectNotFoundDescription: 'The requested project does not exist.' },
     footer: { rightsReserved: 'All rights reserved.' },
     a11y: { openProject: 'Open project' },
+    common: { clientLabel: 'Client' },
   },
 }
