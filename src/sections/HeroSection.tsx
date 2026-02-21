@@ -11,7 +11,7 @@ export function HeroSection() {
   const subheadlineLines = getTranslated(hero.subheadlineLines, locale)
 
   return (
-    <section className="relative mx-auto w-full max-w-5xl py-12 sm:py-16 after:absolute after:bottom-0 after:left-1/2 after:h-px after:w-[85%] after:-translate-x-1/2 after:bg-slate-200/60 after:content-['']">
+    <section className="relative w-full py-12 sm:py-16 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:bg-slate-200/60 after:content-['']">
       <motion.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, ease: 'easeOut' }} className="max-w-4xl">
         <p className="text-sm font-medium tracking-[0.08em] text-slate-500">
           {kickerLines.map((line) => (

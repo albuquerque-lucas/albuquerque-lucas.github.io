@@ -21,8 +21,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
       initial={{ opacity: 0, y: 8 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="group relative border-l-[3px] border-l-blue-600/45 py-8 pl-6 transition duration-200 hover:-translate-y-0.5 hover:border-l-blue-600/80 hover:bg-blue-50/60 focus-within:border-l-blue-700 focus-within:bg-blue-50/60 after:absolute after:bottom-0 after:left-1/2 after:h-px after:w-[85%] after:-translate-x-1/2 after:bg-slate-300/90 after:content-[''] last:after:hidden"
+      className="group relative border-l-[3px] border-l-blue-600/45 py-8 pl-6 transition duration-200 hover:-translate-y-0.5 hover:border-l-blue-600/80 hover:bg-blue-50/60 focus-within:border-l-blue-700 focus-within:bg-blue-50/60 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:bg-slate-300/90 after:content-[''] last:after:hidden lg:border-l-0 lg:pl-8"
     >
+      <span aria-hidden className="hidden lg:block lg:absolute lg:left-[-0.92rem] lg:top-11 lg:h-2.5 lg:w-2.5 lg:-translate-x-1/2 lg:rounded-full lg:border lg:border-blue-700/70 lg:bg-slate-50 lg:transition-colors lg:group-hover:bg-blue-100" />
       <Link
         to={`/projects/${project.slug}`}
         aria-label={`${labels.a11y.openProject}: ${productName}`}
