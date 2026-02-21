@@ -54,7 +54,7 @@ export const projects: Project[] = [
     },
     caseStudy: {
       problem: {
-        'pt-BR': 'A Mapas Drone precisava transformar grandes volumes de imagens aereas e mapas em relatorios padronizados, mantendo consistencia visual e rastreabilidade.\n\nO processo manual levava entre 2 e 3 semanas para a conclusao de um relatorio completo, envolvendo organizacao manual de imagens, montagem de layout e revisoes sucessivas.',
+        'pt-BR': 'A Mapas Drone precisava transformar grandes volumes de imagens aereas e mapas em relatorios padronizados, mantendo consistencia visual e rastreabilidade.\n\nO processo manual poderia levar semanas para a conclusao de um relatorio completo, envolvendo organizacao manual de imagens, montagem de layout e revisoes sucessivas.',
         'en-US': 'Mapas Drone needed to transform large volumes of aerial images and maps into standardized inspection reports while maintaining visual consistency and traceability.\n\nThe manual process required 2 to 3 weeks to complete a full report, involving manual image organization, layout assembly, and multiple revision cycles.',
       },
       solution: {
