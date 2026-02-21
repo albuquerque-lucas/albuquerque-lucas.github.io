@@ -8,6 +8,7 @@ import { useI18n } from '../i18n/I18nProvider'
 
 export function ProjectDetails() {
   const { locale, labels } = useI18n()
+  const contentStartClass = 'lg:px-[calc(8.333333%+1rem)]'
   const { slug } = useParams<{ slug: string }>()
   const project = projects.find((item) => item.slug === slug)
 
@@ -46,7 +47,7 @@ export function ProjectDetails() {
     <div className="space-y-12">
       <SiteHeader />
       <section className="py-2 sm:py-4">
-        <div className="mx-auto w-full max-w-5xl px-6 lg:px-10">
+        <div className={`w-full px-3 sm:px-4 ${contentStartClass}`}>
           <Link to="/" className="inline-flex text-sm font-medium text-slate-500 transition hover:text-slate-800">
             {'<-'} {labels.buttons.backToProjects}
           </Link>
