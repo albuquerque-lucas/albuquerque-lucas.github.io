@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 import { profile } from '../data/profile'
 import { useI18n } from '../i18n/I18nProvider'
@@ -16,7 +17,9 @@ export function SiteHeader() {
       className="w-full border-b border-slate-200 py-6 sm:py-8"
     >
       <div className={`flex w-full items-center justify-between gap-4 ${contentStartClass}`}>
-        <p className="text-lg font-medium tracking-tight text-slate-900">{profile.name}</p>
+        <Link to="/" className="text-lg font-medium tracking-tight text-slate-900 hover:text-slate-700">
+          {profile.name}
+        </Link>
         <nav className="flex items-center gap-3 text-xs text-slate-600 sm:gap-4 sm:text-sm">
           <a href={profile.links.github} target="_blank" rel="noreferrer" className="hover:text-slate-900">
             {labels.nav.github}
