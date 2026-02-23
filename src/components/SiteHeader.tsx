@@ -21,6 +21,9 @@ export function SiteHeader() {
           {profile.name}
         </Link>
         <nav className="flex items-center gap-3 text-xs text-slate-600 sm:gap-4 sm:text-sm">
+          <Link to="/about" className="hover:text-slate-900">
+            {labels.nav.about}
+          </Link>
           <a href={profile.links.github} target="_blank" rel="noreferrer" className="hover:text-slate-900">
             {labels.nav.github}
           </a>

@@ -1,7 +1,7 @@
-import type { Translated } from './types'
+﻿import type { Translated } from './types'
 
 export type Labels = {
-  nav: { github: string; linkedin: string; email: string }
+  nav: { about: string; github: string; linkedin: string; email: string }
   locale: { pt: string; en: string }
   sections: {
     projects: string
@@ -26,20 +26,20 @@ export type Labels = {
 
 export const labels: Translated<Labels> = {
   'pt-BR': {
-    nav: { github: 'GitHub', linkedin: 'LinkedIn', email: 'E-mail' },
+    nav: { about: 'Sobre', github: 'GitHub', linkedin: 'LinkedIn', email: 'E-mail' },
     locale: { pt: 'PT', en: 'EN' },
     sections: {
-      projects: 'Projetos', items: 'itens', problem: 'Problema', solution: 'Solucao', architecture: 'Arquitetura', results: 'Resultados',
+      projects: 'Projetos', items: 'itens', problem: 'Problema', solution: 'Solução', architecture: 'Arquitetura', results: 'Resultados',
       webLayer: 'Web Layer', frontend: 'Frontend', backend: 'Backend', frontendComponent: 'Componente Frontend', worker: 'Worker', infra: 'Infra',
     },
-    buttons: { backToProjects: 'Voltar para projetos', repository: 'Repositorio', demo: 'Demo' },
-    states: { projectNotFoundTitle: 'Projeto nao encontrado', projectNotFoundDescription: 'O projeto solicitado nao existe.' },
+    buttons: { backToProjects: 'Voltar para projetos', repository: 'Repositório', demo: 'Demo' },
+    states: { projectNotFoundTitle: 'Projeto não encontrado', projectNotFoundDescription: 'O projeto solicitado não existe.' },
     footer: { rightsReserved: 'Todos os direitos reservados.' },
     a11y: { openProject: 'Abrir projeto' },
     common: { clientLabel: 'Cliente' },
   },
   'en-US': {
-    nav: { github: 'GitHub', linkedin: 'LinkedIn', email: 'Email' },
+    nav: { about: 'About', github: 'GitHub', linkedin: 'LinkedIn', email: 'Email' },
     locale: { pt: 'PT', en: 'EN' },
     sections: {
       projects: 'Projects', items: 'items', problem: 'Problem', solution: 'Solution', architecture: 'Architecture', results: 'Results',
@@ -52,3 +52,4 @@ export const labels: Translated<Labels> = {
     common: { clientLabel: 'Client' },
   },
 }
+
