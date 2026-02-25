@@ -6,7 +6,7 @@ export type Project = {
   clientName: Translated<string>
   title: Translated<string>
   subtitle?: Translated<string>
-  year: number
+  year: string
   excerpt: Translated<string>
   stack: string[]
   highlights: Translated<string[]>
@@ -32,7 +32,7 @@ export const projects: Project[] = [
     productName: { 'pt-BR': 'MapIQ', 'en-US': 'MapIQ' },
     clientName: { 'pt-BR': 'Mapas Drone', 'en-US': 'Mapas Drone' },
     title: { 'pt-BR': 'MapIQ - Plataforma de Relatórios de Inspeção com Drones', 'en-US': 'MapIQ - Drone Inspection Reporting Platform' },
-    year: 2026,
+    year: '2024-2026',
     excerpt: {
       'pt-BR': 'Plataforma full-stack para criação e geração automatizada de relatórios de inspeção com imagens e mapas, com pipeline dedicado de renderização em PDF.',
       'en-US': 'Full-stack platform for creating and automatically generating inspection reports with images and maps, backed by a dedicated PDF rendering pipeline.',
@@ -106,7 +106,7 @@ export const projects: Project[] = [
     productName: { 'pt-BR': 'Assinando', 'en-US': 'Assinando' },
     clientName: { 'pt-BR': 'Docteka', 'en-US': 'Docteka' },
     title: { 'pt-BR': 'Assinando - Plataforma de Assinatura Digital', 'en-US': 'Assinando - Digital Signature Platform' },
-    year: 2026,
+    year: '2024-2025',
     excerpt: {
       'pt-BR': 'Nova versão web em Laravel da plataforma de assinatura digital, com foco na área autenticada de upload, gestão e acompanhamento de documentos, integrando Blade e componentes React.',
       'en-US': 'New Laravel web version of a digital signature platform, focused on the authenticated area for document upload, management and signature tracking, integrating Blade and React components.',
@@ -198,7 +198,7 @@ export const projects: Project[] = [
       'pt-BR': 'Docteka - Sistema de Importação Estruturada de Dados',
       'en-US': 'Docteka - Structured Data Import System',
     },
-    year: 2026,
+    year: '2025',
     excerpt: {
       'pt-BR':
         'Pipeline corporativo de importação para ingestão de planilhas (.csv e .xlsx), com validação estrutural, mapeamento dinâmico e persistência padronizada para múltiplas contas empresariais.',
@@ -280,7 +280,7 @@ export const projects: Project[] = [
     productName: { 'pt-BR': 'Gavio Arquitetura', 'en-US': 'Gavio Arquitetura' },
     clientName: { 'pt-BR': 'Gavio Arquitetura', 'en-US': 'Gavio Arquitetura' },
     title: { 'pt-BR': 'Gavio Arquitetura - Site Institucional e Painel Administrativo', 'en-US': 'Gavio Arquitetura - Institutional Website and Admin Panel' },
-    year: 2026,
+    year: '2020-2026',
     excerpt: {
       'pt-BR': 'Plataforma web institucional para apresentação de projetos de arquitetura com painel administrativo evolutivo, desenvolvida e modernizada ao longo de múltiplas versões.',
       'en-US': 'Institutional web platform for showcasing architecture projects with an evolving administrative panel, developed and modernized across multiple versions.',
