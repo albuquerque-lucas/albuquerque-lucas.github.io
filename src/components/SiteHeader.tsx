@@ -16,11 +16,11 @@ export function SiteHeader() {
       transition={{ duration: 0.35, ease: 'easeOut' }}
       className="w-full border-b border-slate-200 py-6 sm:py-8"
     >
-      <div className={`flex w-full items-center justify-between gap-4 ${contentStartClass}`}>
+      <div className={`flex w-full flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between ${contentStartClass}`}>
         <Link to="/" className="text-lg font-medium tracking-tight text-slate-900 hover:text-slate-700">
           {profile.name}
         </Link>
-        <nav className="flex items-center gap-3 text-xs text-slate-600 sm:gap-4 sm:text-sm">
+        <nav className="flex flex-wrap items-center gap-3 text-xs text-slate-600 sm:gap-4 sm:text-sm">
           <Link to="/about" className="hover:text-slate-900">
             {labels.nav.about}
           </Link>

@@ -13,6 +13,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
   const { locale, labels } = useI18n()
   const productName = getTranslated(project.productName, locale)
   const clientName = getTranslated(project.clientName, locale)
+  const year = getTranslated(project.year, locale)
   const excerpt = getTranslated(project.excerpt, locale)
   const highlights = getTranslated(project.highlights, locale).slice(0, 3)
 
@@ -29,7 +30,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         aria-label={`${labels.a11y.openProject}: ${productName}`}
         className="block cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
       >
-        <p className="text-xs font-semibold uppercase tracking-wide text-slate-700">{project.year}</p>
+        <p className="text-xs font-semibold uppercase tracking-wide text-slate-700">{year}</p>
         <div className="mt-3 grid gap-6 md:grid-cols-[minmax(0,1fr)_auto] md:items-start">
           <div>
             <div className="flex items-start justify-between gap-4">

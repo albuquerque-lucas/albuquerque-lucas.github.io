@@ -26,83 +26,83 @@ export type AboutContent = {
 export const aboutContent: AboutContent = {
   hero: {
     headline: {
-      'pt-BR': 'Engenharia de software orientada a arquitetura, previsibilidade e evolução contínua.',
-      'en-US': 'Software engineering centered on architecture, predictability, and continuous evolution.',
+      'pt-BR': 'Desenvolvedor Full Stack | PHP/Laravel, React e TypeScript',
+      'en-US': 'Full Stack Developer | PHP/Laravel, React, and TypeScript',
     },
     subheadline: {
-      'pt-BR': 'Projeto sistemas com separação clara de responsabilidades e decisões técnicas sustentáveis no longo prazo.',
-      'en-US': 'I build systems with clear separation of responsibilities and technical decisions that hold over time.',
+      'pt-BR': 'Trabalho com aplicações web em produção, APIs REST, regras de negócio, integrações com MySQL, filas, jobs e processamento assíncrono.',
+      'en-US': 'I work with production web applications, REST APIs, business rules, MySQL integrations, queues, jobs, and asynchronous processing.',
     },
   },
   mindset: {
     title: {
-      'pt-BR': 'Como eu penso software',
-      'en-US': 'How I think about software',
+      'pt-BR': 'Atuação',
+      'en-US': 'Experience',
     },
     paragraphs: {
       'pt-BR': [
-        'Software robusto nasce de arquitetura clara. Eu priorizo delimitação explícita de contexto, contratos consistentes entre camadas e responsabilidades bem separadas para reduzir acoplamento e evitar comportamento imprevisível.',
-        'Estruturo sistemas para evolução incremental, não para correções recorrentes. Isso significa modelagem orientada a negócio, persistência rastreável e fluxos deterministas que permitem escalar sem perder legibilidade nem controle operacional.',
+        'Atualmente trabalho na Bredi, uma software house onde atuo na evolução e sustentação de aplicações novas e legadas para diferentes segmentos. Minha rotina inclui APIs, integrações de pagamento e Pix, webhooks, checkout, pedidos, frete, rotinas financeiras, documentos PDF e notificações.',
+        'Anteriormente, na Docteka, participei do desenvolvimento e manutenção de plataformas multi-clientes de gestão documental, RH e assinatura digital, trabalhando com uploads, permissões, importação de arquivos, geração de PDFs, filas, jobs e e-mails.',
       ],
       'en-US': [
-        'Robust software starts with clear architecture. I prioritize explicit boundaries, consistent contracts between layers, and strong separation of responsibilities to reduce coupling and avoid unpredictable behavior.',
-        'I structure systems for incremental evolution, not recurring fixes. That means domain-oriented modeling, traceable persistence, and deterministic flows that scale without sacrificing readability or operational control.',
+        'I currently work at Bredi, a software house where I develop and maintain new and legacy applications across different sectors. My routine includes APIs, payment and Pix integrations, webhooks, checkout, orders, shipping, financial workflows, PDF documents, and notifications.',
+        'Previously, at Docteka, I helped develop and maintain multi-client document management, HR, and digital signature platforms, working with uploads, permissions, file imports, PDF generation, queues, jobs, and email.',
       ],
     },
   },
   principles: {
     title: {
-      'pt-BR': 'Princípios de engenharia',
-      'en-US': 'Engineering principles',
+      'pt-BR': 'Tecnologias',
+      'en-US': 'Technologies',
     },
     items: {
       'pt-BR': [
-        'Arquitetura orientada a previsibilidade.',
-        'Separação clara de responsabilidades.',
-        'Multi-tenant considerado desde a modelagem.',
-        'Persistência estruturada e rastreável.',
-        'Automação acima de processo manual.',
-        'Integrações sólidas e determinísticas.',
+        'Backend: PHP, Laravel, Node.js e APIs REST.',
+        'Frontend: React, TypeScript, JavaScript e Next.js.',
+        'Dados e processamento: MySQL, filas, jobs, webhooks e processamento assíncrono.',
+        'Infraestrutura e ferramentas: Docker, GitHub Actions, AWS e Git.',
+        'Complementares: Python, FastAPI e WeasyPrint.',
       ],
       'en-US': [
-        'Architecture driven by predictability.',
-        'Clear separation of responsibilities.',
-        'Multi-tenant concerns addressed at modeling time.',
-        'Structured, traceable persistence.',
-        'Automation over manual process.',
-        'Solid, deterministic integrations.',
+        'Backend: PHP, Laravel, Node.js, and REST APIs.',
+        'Frontend: React, TypeScript, JavaScript, and Next.js.',
+        'Data and processing: MySQL, queues, jobs, webhooks, and asynchronous processing.',
+        'Infrastructure and tools: Docker, GitHub Actions, AWS, and Git.',
+        'Additional tools: Python, FastAPI, and WeasyPrint.',
       ],
     },
   },
   trajectory: {
     title: {
-      'pt-BR': 'Trajetória',
-      'en-US': 'Trajectory',
+      'pt-BR': 'Formação e certificação',
+      'en-US': 'Education and certification',
     },
     paragraphs: {
       'pt-BR': [
-        'Minha base inicial em Administração consolidou visão de processos, organização e tomada de decisão orientada a resultado.',
-        'Na sequência, fiz formação intensiva full-stack e avancei para sistemas corporativos reais, atuando em arquitetura de produto, integrações e fluxo de dados em produção. Hoje sigo em Engenharia de Software, aprofundando fundamentos e elevando consistência técnica em cada entrega.',
+        'Engenharia de Software na Estácio — ago/2025 a jun/2029, em andamento.',
+        'Desenvolvimento Web Full Stack na Trybe — nov/2022 a jan/2024.',
+        'Cambridge B2 First (FCE) — certificação de proficiência em inglês, nível B2.',
       ],
       'en-US': [
-        'My initial background in Business Administration built a strong foundation in process design, organization, and result-oriented decision-making.',
-        'Then I completed intensive full-stack training and moved into real corporate systems, working on product architecture, integrations, and production data flows. I am currently pursuing Software Engineering, deepening core foundations and raising technical consistency in every delivery.',
+        'Software Engineering at Estácio — Aug 2025 to Jun 2029, in progress.',
+        'Full Stack Web Development at Trybe — Nov 2022 to Jan 2024.',
+        'Cambridge B2 First (FCE) — English proficiency certification, level B2.',
       ],
     },
   },
   current: {
     title: {
-      'pt-BR': 'Atualmente',
-      'en-US': 'Currently',
+      'pt-BR': 'Perfil',
+      'en-US': 'Profile',
     },
     paragraphs: {
       'pt-BR': [
-        'Estou aprofundando arquitetura de software, sistemas distribuídos, escalabilidade e qualidade de código.',
-        'Meu foco é evolução contínua como engenheiro: projetar com mais precisão, operar com mais confiabilidade e sustentar produtos que crescem sem comprometer a base técnica.',
+        'Meu foco principal é PHP e Laravel no backend. Também atuo com React e TypeScript no frontend, conectando interfaces a APIs e regras de negócio.',
+        'Neste portfólio estão alguns projetos públicos e estudos de caso relacionados ao trabalho que venho desenvolvendo.',
       ],
       'en-US': [
-        'I am deepening my practice in software architecture, distributed systems, scalability, and code quality.',
-        'My focus is continuous engineering growth: design with more precision, operate with higher reliability, and sustain products that scale without weakening the technical foundation.',
+        'My main focus is PHP and Laravel on the backend. I also work with React and TypeScript on the frontend, connecting interfaces to APIs and business rules.',
+        'This portfolio contains selected public projects and case studies related to the work I have been doing.',
       ],
     },
   },

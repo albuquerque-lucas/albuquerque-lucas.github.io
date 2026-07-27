@@ -8,15 +8,15 @@ export type HeroContent = {
 
 export const hero: HeroContent = {
   headline: {
-    'pt-BR': 'Engenharia de software aplicada a sistemas reais.',
-    'en-US': 'Software engineering applied to real-world systems.',
+    'pt-BR': 'Desenvolvedor Full Stack com foco em PHP e Laravel.',
+    'en-US': 'Full Stack Developer focused on PHP and Laravel.',
   },
   subheadline: {
-    'pt-BR': 'Arquitetura limpa, fluxos bem definidos e solu\u00e7\u00f5es pensadas para evoluir.',
-    'en-US': 'Clean architecture, well-defined flows, and solutions designed to evolve.',
+    'pt-BR': 'Atuo também com React e TypeScript no frontend, desenvolvendo sistemas web em produção, APIs REST, integrações e processamento assíncrono.',
+    'en-US': 'I also work with React and TypeScript on the frontend, building production web systems, REST APIs, integrations, and asynchronous processing.',
   },
   supportingLine: {
-    'pt-BR': 'Full-Stack Engineer \u00b7 Laravel \u00b7 React \u00b7 Python',
-    'en-US': 'Full-Stack Engineer \u00b7 Laravel \u00b7 React \u00b7 Python',
+    'pt-BR': 'PHP · Laravel · React · TypeScript · MySQL',
+    'en-US': 'PHP · Laravel · React · TypeScript · MySQL',
   },
 }

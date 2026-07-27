@@ -1,5 +1,6 @@
 import { ReadingLayout } from '../components/layout/ReadingLayout'
 import { SiteHeader } from '../components/SiteHeader'
+import { ExperienceSection } from '../sections/ExperienceSection'
 import { HeroSection } from '../sections/HeroSection'
 import { ProjectsSection } from '../sections/ProjectsSection'
 
@@ -10,6 +11,7 @@ export function Home() {
 
       <ReadingLayout>
         <HeroSection />
+        <ExperienceSection />
         <ProjectsSection />
       </ReadingLayout>
     </div>
