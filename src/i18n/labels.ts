@@ -4,6 +4,7 @@ export type Labels = {
   nav: { about: string; github: string; linkedin: string; email: string }
   locale: { pt: string; en: string }
   sections: {
+    experience: string
     projects: string
     items: string
     problem: string
@@ -29,7 +30,7 @@ export const labels: Translated<Labels> = {
     nav: { about: 'Sobre', github: 'GitHub', linkedin: 'LinkedIn', email: 'E-mail' },
     locale: { pt: 'PT', en: 'EN' },
     sections: {
-      projects: 'Projetos', items: 'itens', problem: 'Problema', solution: 'Solução', architecture: 'Arquitetura', results: 'Resultados',
+      experience: 'Experiência', projects: 'Projetos', items: 'itens', problem: 'Contexto', solution: 'Atuação', architecture: 'Tecnologias e estrutura', results: 'Contribuições',
       webLayer: 'Web Layer', frontend: 'Frontend', backend: 'Backend', frontendComponent: 'Componente Frontend', worker: 'Worker', infra: 'Infra',
     },
     buttons: { backToProjects: 'Voltar para projetos', repository: 'Repositório', demo: 'Demo' },
@@ -42,7 +43,7 @@ export const labels: Translated<Labels> = {
     nav: { about: 'About', github: 'GitHub', linkedin: 'LinkedIn', email: 'Email' },
     locale: { pt: 'PT', en: 'EN' },
     sections: {
-      projects: 'Projects', items: 'items', problem: 'Problem', solution: 'Solution', architecture: 'Architecture', results: 'Results',
+      experience: 'Experience', projects: 'Projects', items: 'items', problem: 'Context', solution: 'Work delivered', architecture: 'Technology and structure', results: 'Contributions',
       webLayer: 'Web Layer', frontend: 'Frontend', backend: 'Backend', frontendComponent: 'Frontend Component', worker: 'Worker', infra: 'Infra',
     },
     buttons: { backToProjects: 'Back to projects', repository: 'Repository', demo: 'Demo' },

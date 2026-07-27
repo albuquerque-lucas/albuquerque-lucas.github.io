@@ -29,6 +29,7 @@ export function ProjectDetails() {
 
   const productName = getTranslated(project.productName, locale)
   const clientName = getTranslated(project.clientName, locale)
+  const year = getTranslated(project.year, locale)
   const subtitle = project.subtitle ? getTranslated(project.subtitle, locale) : undefined
   const excerpt = getTranslated(project.excerpt, locale)
   const highlights = getTranslated(project.highlights, locale).slice(0, 3)
@@ -56,7 +57,7 @@ export function ProjectDetails() {
             <header className="border-b border-slate-200/80 pb-10">
               <h1 className="text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">{productName}</h1>
               <div className="mt-4 flex flex-wrap items-center gap-3 text-sm text-slate-700">
-                <span className="font-medium text-slate-800">{project.year}</span>
+                <span className="font-medium text-slate-800">{year}</span>
                 <ClientBadge clientName={clientName} />
                 {project.links?.repo && (
                   <a href={project.links.repo} target="_blank" rel="noreferrer" className="font-medium text-slate-700 transition hover:text-slate-900">
@@ -103,7 +104,7 @@ export function ProjectDetails() {
                   <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-slate-500/70" />
                   <span>{labels.sections.solution}</span>
                 </h2>
-                <p className="mt-3 text-base leading-relaxed text-slate-800">{solution}</p>
+                <p className="mt-3 whitespace-pre-line text-base leading-relaxed text-slate-800">{solution}</p>
               </section>
 
               <section className="border-b border-slate-200/70 pb-10">

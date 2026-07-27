@@ -1,4 +1,4 @@
-﻿import type { Translated } from '../i18n/types'
+import type { Translated } from '../i18n/types'
 
 export type Project = {
   slug: string
@@ -6,7 +6,7 @@ export type Project = {
   clientName: Translated<string>
   title: Translated<string>
   subtitle?: Translated<string>
-  year: string
+  year: Translated<string>
   excerpt: Translated<string>
   stack: string[]
   highlights: Translated<string[]>
@@ -30,73 +30,257 @@ export const projects: Project[] = [
   {
     slug: 'mapiq-drone-inspection-reporting-platform',
     productName: { 'pt-BR': 'MapIQ', 'en-US': 'MapIQ' },
-    clientName: { 'pt-BR': 'Mapas Drone', 'en-US': 'Mapas Drone' },
-    title: { 'pt-BR': 'MapIQ - Plataforma de Relatórios de Inspeção com Drones', 'en-US': 'MapIQ - Drone Inspection Reporting Platform' },
-    year: '2024-2026',
-    excerpt: {
-      'pt-BR': 'Plataforma full-stack para criação e geração automatizada de relatórios de inspeção com imagens e mapas, com pipeline dedicado de renderização em PDF.',
-      'en-US': 'Full-stack platform for creating and automatically generating inspection reports with images and maps, backed by a dedicated PDF rendering pipeline.',
+    clientName: {
+      'pt-BR': 'Principal responsabilidade técnica',
+      'en-US': 'Primary technical responsibility',
     },
-    stack: ['React', 'TypeScript', 'Laravel', 'Python', 'Docker', 'WeasyPrint'],
+    title: {
+      'pt-BR': 'MapIQ — Plataforma multiempresa de relatórios técnicos',
+      'en-US': 'MapIQ — Multi-company technical reporting platform',
+    },
+    subtitle: {
+      'pt-BR': 'Principal responsável técnico, com colaboração pontual no frontend.',
+      'en-US': 'Primary technical contributor, with occasional frontend collaboration.',
+    },
+    year: { 'pt-BR': 'Em produção', 'en-US': 'In production' },
+    excerpt: {
+      'pt-BR': 'Plataforma multiempresa para criação, revisão, aprovação e geração de relatórios técnicos com páginas de texto e mapas.',
+      'en-US': 'Multi-company platform for creating, reviewing, approving, and generating technical reports with text and map pages.',
+    },
+    stack: ['Laravel', 'PHP', 'MySQL', 'React', 'TypeScript', 'FastAPI', 'WeasyPrint'],
     highlights: {
       'pt-BR': [
-        'Editor modular de páginas (texto e mapas) com ordenação drag-and-drop',
-        'Pipeline de geração de PDF com worker isolado e layout dinâmico',
-        'Persistência estruturada de páginas e assets com versionamento logico',
-        'Upload e organização de imagens com processamento controlado',
+        'Integração entre SPA, API REST e worker dedicado à geração de PDFs',
+        'Autenticação, controle de acesso e organização por empresas e filiais',
+        'Editor de páginas, revisão, aprovação e notificações em tempo real',
       ],
       'en-US': [
-        'Modular page editor (text and maps) with drag-and-drop ordering',
-        'PDF generation pipeline with isolated worker and dynamic layout',
-        'Structured page and asset persistence with logical versioning',
-        'Image upload and organization with controlled processing',
+        'Integration across the SPA, REST API, and dedicated PDF worker',
+        'Authentication, access control, and organization by companies and branches',
+        'Page editor, review, approval, and real-time notifications',
       ],
+    },
+    links: {
+      demo: 'https://relatorios.mapiq.com.br/login',
     },
     caseStudy: {
       problem: {
-        'pt-BR': 'A Mapas Drone precisava transformar grandes volumes de imagens aéreas e mapas em relatórios padronizados, mantendo consistência visual e rastreabilidade.\n\nO processo manual poderia levar semanas para a conclusão de um relatório completo, envolvendo organização manual de imagens, montagem de layout e revisões sucessivas.',
-        'en-US': 'Mapas Drone needed to transform large volumes of aerial images and maps into standardized inspection reports while maintaining visual consistency and traceability.\n\nThe manual process required 2 to 3 weeks to complete a full report, involving manual image organization, layout assembly, and multiple revision cycles.',
+        'pt-BR': 'A operação precisava reunir, em uma plataforma multiempresa, a montagem de relatórios técnicos com páginas de texto e mapas, além dos fluxos de revisão, aprovação e geração de PDF.',
+        'en-US': 'The operation needed a multi-company platform that combined technical report authoring with text and map pages, along with review, approval, and PDF generation workflows.',
       },
       solution: {
-        'pt-BR': 'Desenvolvi uma plataforma full-stack que permite construção dinâmica de páginas de relatório (texto e mapas), upload organizado de imagens, ordenação visual via SPA e geração automatizada de PDF a partir de templates HTML/CSS.\n\nA arquitetura foi projetada como plataforma multi-tenant, com gerenciamento estruturado de empresas e branches, controle de permissões por papel (RBAC) e rastreabilidade por entidade.\n\nO sistema separa claramente a camada de edição da camada de renderização final, garantindo previsibilidade na geração dos relatórios e consistência visual.',
-        'en-US': 'I developed a full-stack platform that enables dynamic report page construction (text and maps), structured image uploads, visual ordering through a SPA, and automated PDF generation from HTML/CSS templates.\n\nThe architecture was designed as a multi-tenant platform, with structured management of companies and branches, role-based access control (RBAC), and entity-level traceability.\n\nThe system clearly separates the editing layer from the final rendering layer, ensuring deterministic PDF generation and visual consistency.',
+        'pt-BR': 'Fui o principal responsável técnico pela integração entre a SPA em React e TypeScript, a API Laravel/MySQL e o worker FastAPI/WeasyPrint. O trabalho incluiu autenticação e controle de acesso, estrutura multiempresa, páginas editáveis, revisão, aprovação, notificações em tempo real e automação de deploy, com colaboração pontual no frontend.',
+        'en-US': 'I was the primary technical contributor responsible for integrating the React and TypeScript SPA, the Laravel/MySQL API, and the FastAPI/WeasyPrint worker. The work covered authentication and access control, multi-company structure, editable pages, review, approval, real-time notifications, and deployment automation, with occasional frontend collaboration.',
       },
       architecture: {
         frontend: {
-          'pt-BR': ['React', 'TypeScript', 'Editor modular baseado em estados', 'Comunicação via API REST'],
-          'en-US': ['React', 'TypeScript', 'State-driven modular editor', 'Communication through REST API'],
+          'pt-BR': ['React e TypeScript', 'SPA integrada por API REST', 'Editor de páginas de texto e mapas'],
+          'en-US': ['React and TypeScript', 'SPA connected through a REST API', 'Text and map page editor'],
         },
         backend: {
-          'pt-BR': [
-            'Laravel',
-            'Modelagem estruturada de páginas, mapas e relatórios',
-            'Multi-tenant (empresas e branches)',
-            'Controle de permissões baseado em papéis (RBAC)',
-            'Notificacoes em tempo real via WebSockets',
-          ],
-          'en-US': [
-            'Laravel',
-            'Structured modeling of pages, maps and reports',
-            'Multi-tenant (companies and branches)',
-            'Role-based access control (RBAC)',
-            'Real-time notifications via WebSockets',
-          ],
+          'pt-BR': ['Laravel e MySQL', 'Autenticação JWT e controle de acesso', 'Empresas, filiais, relatórios e etapas de aprovação'],
+          'en-US': ['Laravel and MySQL', 'JWT authentication and access control', 'Companies, branches, reports, and approval stages'],
         },
         worker: {
-          'pt-BR': ['Python', 'WeasyPrint', 'Renderização determinística de PDF'],
-          'en-US': ['Python', 'WeasyPrint', 'Deterministic PDF rendering'],
+          'pt-BR': ['FastAPI', 'WeasyPrint', 'Geração de documentos PDF'],
+          'en-US': ['FastAPI', 'WeasyPrint', 'PDF document generation'],
         },
         infra: {
-          'pt-BR': ['Docker', 'Storage organizado para imagens e assets'],
-          'en-US': ['Docker', 'Organized storage for images and assets'],
+          'pt-BR': ['GitHub Actions', 'Deploy automatizado por SSH'],
+          'en-US': ['GitHub Actions', 'Automated deployment over SSH'],
         },
       },
       results: {
         'pt-BR': [
-          'A implementação reduziu o tempo médio de produção de relatórios de 2-3 semanas para aproximadamente 1 dia, padronizando layout, aumentando rastreabilidade e eliminando retrabalho manual.',
+          'Fluxo integrado de criação, revisão, aprovação e geração de relatórios.',
+          'Controle de acesso e organização por empresa e filial.',
+          'Notificações em tempo real e deploy automatizado.',
         ],
         'en-US': [
-          'The implementation reduced average report production time from 2-3 weeks to approximately 1 day, standardizing layout, improving traceability, and eliminating manual rework.',
+          'Integrated report creation, review, approval, and generation workflow.',
+          'Access control and organization by company and branch.',
+          'Real-time notifications and automated deployment.',
+        ],
+      },
+    },
+  },
+  {
+    slug: 'gavio-arquitetura',
+    productName: { 'pt-BR': 'Gávio Arquitetura', 'en-US': 'Gávio Arquitetura' },
+    clientName: { 'pt-BR': 'Projeto sob demanda', 'en-US': 'On-demand project' },
+    title: {
+      'pt-BR': 'Gávio Arquitetura — Site institucional e painel administrativo',
+      'en-US': 'Gávio Arquitetura — Institutional website and admin panel',
+    },
+    year: { 'pt-BR': 'Projeto público', 'en-US': 'Public project' },
+    excerpt: {
+      'pt-BR': 'Aplicação Laravel com site institucional para apresentação de projetos de arquitetura e painel administrativo para gestão do conteúdo.',
+      'en-US': 'Laravel application with an institutional website for showcasing architecture projects and an admin panel for content management.',
+    },
+    stack: ['PHP', 'Laravel', 'Blade', 'MySQL', 'JavaScript'],
+    highlights: {
+      'pt-BR': [
+        'Cadastro e organização de projetos e categorias',
+        'Upload e gerenciamento de imagens do portfólio',
+        'Conteúdo institucional administrável',
+      ],
+      'en-US': [
+        'Project and category management',
+        'Portfolio image upload and management',
+        'Editable institutional content',
+      ],
+    },
+    links: {
+      repo: 'https://github.com/albuquerque-lucas/Gavio-Arquitetura-2.0',
+    },
+    caseStudy: {
+      problem: {
+        'pt-BR': 'O site precisava apresentar projetos de arquitetura de forma organizada e permitir que o conteúdo fosse atualizado por uma área administrativa.',
+        'en-US': 'The website needed to present architecture projects in an organized way and allow content updates through an administrative area.',
+      },
+      solution: {
+        'pt-BR': 'Desenvolvi uma aplicação Laravel com páginas institucionais, organização de projetos por categorias, gerenciamento de imagens e painel autenticado para manutenção do conteúdo.',
+        'en-US': 'I built a Laravel application with institutional pages, project organization by category, image management, and an authenticated admin panel for content maintenance.',
+      },
+      architecture: {
+        frontend: {
+          'pt-BR': ['Blade', 'JavaScript', 'Layout responsivo'],
+          'en-US': ['Blade', 'JavaScript', 'Responsive layout'],
+        },
+        backend: {
+          'pt-BR': ['PHP e Laravel', 'Autenticação administrativa', 'Gestão de projetos, categorias e conteúdo'],
+          'en-US': ['PHP and Laravel', 'Admin authentication', 'Project, category, and content management'],
+        },
+        infra: {
+          'pt-BR': ['MySQL', 'Armazenamento de imagens'],
+          'en-US': ['MySQL', 'Image storage'],
+        },
+      },
+      results: {
+        'pt-BR': [
+          'Site institucional e painel administrativo reunidos na mesma aplicação.',
+          'Fluxos de cadastro e atualização de projetos e imagens.',
+        ],
+        'en-US': [
+          'Institutional website and admin panel in the same application.',
+          'Project and image creation and update workflows.',
+        ],
+      },
+    },
+  },
+  {
+    slug: 'testello',
+    productName: { 'pt-BR': 'Testello', 'en-US': 'Testello' },
+    clientName: { 'pt-BR': 'Projeto pessoal', 'en-US': 'Personal project' },
+    title: {
+      'pt-BR': 'Testello — Processamento de arquivos e gestão de fretes',
+      'en-US': 'Testello — File processing and shipping management',
+    },
+    year: { 'pt-BR': 'Projeto público', 'en-US': 'Public project' },
+    excerpt: {
+      'pt-BR': 'Backend Laravel para processamento de arquivos e organização de dados relacionados à gestão de fretes.',
+      'en-US': 'Laravel backend for file processing and organizing data related to shipping management.',
+    },
+    stack: ['PHP', 'Laravel', 'MySQL', 'Docker'],
+    highlights: {
+      'pt-BR': [
+        'API e regras de negócio em Laravel',
+        'Recebimento e processamento estruturado de arquivos',
+        'Persistência e consulta de dados de frete',
+      ],
+      'en-US': [
+        'Laravel API and business rules',
+        'Structured file upload and processing',
+        'Shipping data persistence and queries',
+      ],
+    },
+    links: {
+      repo: 'https://github.com/albuquerque-lucas/testello',
+    },
+    caseStudy: {
+      problem: {
+        'pt-BR': 'O projeto precisava receber arquivos, validar os dados e organizar as informações processadas para consulta em um fluxo de gestão de fretes.',
+        'en-US': 'The project needed to receive files, validate their data, and organize the processed information for use in a shipping management workflow.',
+      },
+      solution: {
+        'pt-BR': 'Estruturei o backend em Laravel, separando o recebimento dos arquivos, as regras de validação e processamento e a persistência dos registros.',
+        'en-US': 'I structured the Laravel backend by separating file intake, validation and processing rules, and record persistence.',
+      },
+      architecture: {
+        backend: {
+          'pt-BR': ['PHP e Laravel', 'API REST', 'Validação e processamento de arquivos'],
+          'en-US': ['PHP and Laravel', 'REST API', 'File validation and processing'],
+        },
+        infra: {
+          'pt-BR': ['MySQL', 'Docker'],
+          'en-US': ['MySQL', 'Docker'],
+        },
+      },
+      results: {
+        'pt-BR': [
+          'Fluxo definido para entrada, validação e processamento de arquivos.',
+          'Dados organizados para consumo pela aplicação frontend.',
+        ],
+        'en-US': [
+          'Defined workflow for file intake, validation, and processing.',
+          'Data organized for consumption by the frontend application.',
+        ],
+      },
+    },
+  },
+  {
+    slug: 'testello-spa',
+    productName: { 'pt-BR': 'Testello SPA', 'en-US': 'Testello SPA' },
+    clientName: { 'pt-BR': 'Projeto pessoal', 'en-US': 'Personal project' },
+    title: {
+      'pt-BR': 'Testello SPA — Interface para gestão de fretes',
+      'en-US': 'Testello SPA — Shipping management interface',
+    },
+    year: { 'pt-BR': 'Projeto público', 'en-US': 'Public project' },
+    excerpt: {
+      'pt-BR': 'Interface em React e TypeScript para envio de arquivos, consulta de dados processados e integração com a API do Testello.',
+      'en-US': 'React and TypeScript interface for file uploads, processed data queries, and integration with the Testello API.',
+    },
+    stack: ['React', 'TypeScript', 'Vite'],
+    highlights: {
+      'pt-BR': [
+        'Integração com a API Laravel',
+        'Fluxo de envio e acompanhamento de arquivos',
+        'Interface responsiva para consulta dos dados',
+      ],
+      'en-US': [
+        'Integration with the Laravel API',
+        'File upload and tracking workflow',
+        'Responsive interface for data queries',
+      ],
+    },
+    links: {
+      repo: 'https://github.com/albuquerque-lucas/testello-spa',
+      demo: 'https://testello-spa.vercel.app/',
+    },
+    caseStudy: {
+      problem: {
+        'pt-BR': 'Os recursos do backend precisavam de uma interface web para enviar arquivos e consultar as informações processadas.',
+        'en-US': 'The backend capabilities needed a web interface for submitting files and viewing processed information.',
+      },
+      solution: {
+        'pt-BR': 'Desenvolvi uma SPA em React e TypeScript conectada à API do Testello, organizando os fluxos de envio, retorno de validações e consulta dos dados.',
+        'en-US': 'I developed a React and TypeScript SPA connected to the Testello API, organizing file upload, validation feedback, and data query flows.',
+      },
+      architecture: {
+        frontend: {
+          'pt-BR': ['React', 'TypeScript', 'Vite', 'Integração com API REST'],
+          'en-US': ['React', 'TypeScript', 'Vite', 'REST API integration'],
+        },
+      },
+      results: {
+        'pt-BR': [
+          'Interface dedicada aos fluxos do Testello.',
+          'Integração entre envio de arquivos, validações e dados processados.',
+        ],
+        'en-US': [
+          'Dedicated interface for Testello workflows.',
+          'Integration across file submission, validation, and processed data.',
         ],
       },
     },
@@ -105,84 +289,55 @@ export const projects: Project[] = [
     slug: 'assinando-digital-signature-platform',
     productName: { 'pt-BR': 'Assinando', 'en-US': 'Assinando' },
     clientName: { 'pt-BR': 'Docteka', 'en-US': 'Docteka' },
-    title: { 'pt-BR': 'Assinando - Plataforma de Assinatura Digital', 'en-US': 'Assinando - Digital Signature Platform' },
-    year: '2024-2025',
-    excerpt: {
-      'pt-BR': 'Nova versão web em Laravel da plataforma de assinatura digital, com foco na área autenticada de upload, gestão e acompanhamento de documentos, integrando Blade e componentes React.',
-      'en-US': 'New Laravel web version of a digital signature platform, focused on the authenticated area for document upload, management and signature tracking, integrating Blade and React components.',
+    title: {
+      'pt-BR': 'Assinando — Plataforma de assinatura digital',
+      'en-US': 'Assinando — Digital signature platform',
     },
-    stack: ['Laravel', 'Blade', 'React'],
+    year: { 'pt-BR': '2024–2025', 'en-US': '2024–2025' },
+    excerpt: {
+      'pt-BR': 'Participação na evolução de uma plataforma de assinatura digital, com área autenticada para upload, gestão e acompanhamento de documentos.',
+      'en-US': 'Contribution to the evolution of a digital signature platform with an authenticated area for document upload, management, and tracking.',
+    },
+    stack: ['PHP', 'Laravel', 'Blade', 'React', 'MySQL'],
     highlights: {
       'pt-BR': [
-        'Área autenticada para solicitação e acompanhamento de assinaturas',
-        'Upload e gerenciamento de documentos com controle de status',
-        'Adaptacao de regras da API para camada web em Blade',
-        'Validações no fluxo de assinatura (React + Laravel)',
-        'Página de perfil com atualização segura de dados',
+        'Upload e acompanhamento de documentos',
+        'Adaptação de regras de negócio para a camada web',
+        'Validações integradas entre Laravel e React',
       ],
       'en-US': [
-        'Authenticated dashboard for managing signature requests',
-        'Document upload and status tracking',
-        'Adaptation of API rules into web layer (Blade)',
-        'Signature component validations (React + Laravel)',
-        'Secure profile management',
+        'Document upload and tracking',
+        'Business rule adaptation for the web layer',
+        'Integrated validation across Laravel and React',
       ],
     },
     caseStudy: {
       problem: {
-        'pt-BR': 'A plataforma precisava evoluir para uma nova versão web em Laravel, consolidando funcionalidades existentes e estruturando a área autenticada para gerenciamento de documentos, solicitações de assinatura e acompanhamento de status.\n\nEra necessário modernizar a experiência da aplicação, adaptar regras da API para o formato web e garantir consistência nas validações e fluxos de assinatura.',
-        'en-US': 'The platform required a new Laravel-based web version to consolidate existing functionality and structure the authenticated area for managing documents, signature requests and status tracking.\n\nIt was necessary to modernize the application experience, adapt API business rules to a web context and ensure consistency in validation and signature flows.',
+        'pt-BR': 'A nova versão web precisava reunir os fluxos autenticados de upload, solicitação de assinatura, acompanhamento de documentos e manutenção de dados do perfil.',
+        'en-US': 'The new web version needed to bring together authenticated flows for uploads, signature requests, document tracking, and profile data maintenance.',
       },
       solution: {
-        'pt-BR': 'Atuei nos estágios iniciais da nova versão web da plataforma, desenvolvendo a área autenticada em Laravel Blade para:\n\n- Upload de documentos para solicitação de assinatura\n- Visualização de pendências\n- Acompanhamento detalhado de status\n- Gestão de dados de perfil\n\nTambém adaptei regras de negócio já consolidadas na API para a camada web e implementei validações no componente de assinatura desenvolvido em React, garantindo coerência entre backend e frontend.',
-        'en-US': 'I contributed to the early stages of the new web version, developing the authenticated area using Laravel Blade to support:\n\n- Document uploads for signature requests\n- Pending signatures visualization\n- Detailed status tracking\n- Profile management\n\nI also adapted existing API business rules to the web layer and implemented validations in the React-based signature component, ensuring consistency between backend and frontend behavior.',
+        'pt-BR': 'Participei da implementação da área autenticada em Laravel e Blade, da adaptação de regras já existentes e de validações no componente React usado no fluxo de assinatura.',
+        'en-US': 'I contributed to the authenticated Laravel and Blade area, adapted existing rules, and worked on validation in the React component used in the signature workflow.',
       },
       architecture: {
-        webLayer: {
-          'pt-BR': [
-            'Laravel',
-            'Blade Templates',
-            'Integração com componente React para assinatura',
-            'Validações de fluxo no frontend',
-          ],
-          'en-US': [
-            'Laravel',
-            'Blade Templates',
-            'React signature component integration',
-            'Frontend flow validations',
-          ],
+        frontend: {
+          'pt-BR': ['Blade', 'Componente React', 'Validações de fluxo'],
+          'en-US': ['Blade', 'React component', 'Workflow validation'],
         },
         backend: {
-          'pt-BR': [
-            'Laravel',
-            'Reaproveitamento e adaptacao de regras de negócio existentes',
-            'Estruturacao de endpoints para uso em contexto web',
-            'Controle de estado de assinaturas e solicitantes',
-          ],
-          'en-US': [
-            'Laravel',
-            'Reuse and adaptation of existing business rules',
-            'Web-structured endpoints',
-            'Signature state management and tracking',
-          ],
-        },
-        frontendComponent: {
-          'pt-BR': ['React', 'Validações integradas com backend'],
-          'en-US': ['React', 'Integrated validation flow'],
+          'pt-BR': ['PHP e Laravel', 'Regras de negócio', 'Controle de documentos e status'],
+          'en-US': ['PHP and Laravel', 'Business rules', 'Document and status management'],
         },
       },
       results: {
         'pt-BR': [
-          'Consolidação da experiência autenticada',
-          'Fluxo organizado de solicitação e assinatura',
-          'Integração coerente entre Blade e React',
-          'Plataforma estável alinhada a arquitetura adotada',
+          'Área autenticada para upload e acompanhamento de documentos.',
+          'Integração entre a aplicação Laravel e o componente React.',
         ],
         'en-US': [
-          'Consolidated authenticated experience',
-          'Structured signature workflow',
-          'Consistent integration between Blade and React',
-          'Stable platform aligned with architectural decisions',
+          'Authenticated area for document upload and tracking.',
+          'Integration between the Laravel application and the React component.',
         ],
       },
     },
@@ -190,161 +345,61 @@ export const projects: Project[] = [
   {
     slug: 'docteka-structured-data-import-system',
     productName: {
-      'pt-BR': 'Sistema de Importação Estruturada de Dados',
-      'en-US': 'Structured Data Import System',
+      'pt-BR': 'Importação estruturada de dados',
+      'en-US': 'Structured data import',
     },
     clientName: { 'pt-BR': 'Docteka', 'en-US': 'Docteka' },
     title: {
-      'pt-BR': 'Docteka - Sistema de Importação Estruturada de Dados',
-      'en-US': 'Docteka - Structured Data Import System',
+      'pt-BR': 'Docteka — Importação estruturada de dados',
+      'en-US': 'Docteka — Structured data import',
     },
-    year: '2025',
+    year: { 'pt-BR': '2024–2025', 'en-US': '2024–2025' },
     excerpt: {
-      'pt-BR':
-        'Pipeline corporativo de importação para ingestão de planilhas (.csv e .xlsx), com validação estrutural, mapeamento dinâmico e persistência padronizada para múltiplas contas empresariais.',
-      'en-US':
-        'Enterprise import pipeline for .csv/.xlsx ingestion with structural validation, dynamic mapping, and standardized persistence across multiple business accounts.',
+      'pt-BR': 'Rotinas Laravel para importação de arquivos CSV e XLSX, com mapeamento de colunas, validação e persistência estruturada.',
+      'en-US': 'Laravel routines for importing CSV and XLSX files with column mapping, validation, and structured persistence.',
     },
-    stack: ['Laravel', 'PHP', 'MySQL', 'Maatwebsite Excel'],
+    stack: ['PHP', 'Laravel', 'MySQL', 'Maatwebsite Excel'],
     highlights: {
       'pt-BR': [
-        'Mapeamento dinâmico entre headers reais e campos internos',
-        'Validacao estrutural obrigatória antes da persistência',
-        'Rastreabilidade por UUID, account_id e tracking de importação',
+        'Leitura e mapeamento de colunas de arquivos',
+        'Validação antes da persistência',
+        'Rastreabilidade das importações',
       ],
       'en-US': [
-        'Dynamic mapping between real spreadsheet headers and internal fields',
-        'Mandatory structural validation before persistence',
-        'Traceability with UUID, account_id, and import tracking',
+        'File column reading and mapping',
+        'Validation before persistence',
+        'Import traceability',
       ],
     },
     caseStudy: {
       problem: {
-        'pt-BR':
-          'Clientes corporativos precisavam importar grandes volumes de dados estruturados para tabelas internas mantendo consistência, rastreabilidade e integridade.\n\nComo cada conta apresentava variações de layout e nomenclatura, abordagens rígidas elevavam o esforço operacional e dificultavam a escalabilidade do processo.',
-        'en-US':
-          'Enterprise clients needed to import large volumes of structured data into internal tables while preserving consistency, traceability, and data integrity.\n\nSince each account had layout and naming variations, rigid approaches increased operational effort and limited process scalability.',
+        'pt-BR': 'Arquivos de diferentes origens precisavam ser importados com validação, adaptação dos cabeçalhos e associação correta dos registros.',
+        'en-US': 'Files from different sources needed to be imported with validation, header adaptation, and correct record association.',
       },
       solution: {
-        'pt-BR':
-          'Projetei uma solução de importação em Laravel com comandos Artisan customizados para leitura padronizada de arquivos .csv e .xlsx, utilizando a primeira linha como fonte real de headers e realizando mapeamento dinâmico entre colunas e campos internos.\n\nA validação estrutural passou a ser etapa obrigatória antes da persistência: colunas excedentes sao ignoradas, e apenas linhas com campos obrigatorios sao aceitas.\n\nA persistência foi padronizada com UUID por registro e metadados por entidade (incluindo account_id), com tracking de execução e mensagens de validação para dar previsibilidade ao processo.',
-        'en-US':
-          'I designed a Laravel import solution based on custom Artisan commands to standardize .csv/.xlsx ingestion, using the first row as the actual header source and applying dynamic mapping between spreadsheet columns and internal fields.\n\nStructural validation became mandatory before persistence: extra columns are ignored, and only rows containing required fields are accepted.\n\nPersistence was standardized with UUID per record and entity metadata (including account_id), plus execution tracking and validation messages to ensure process predictability.',
+        'pt-BR': 'Trabalhei em rotinas Laravel para leitura de CSV e XLSX, mapeamento entre colunas e campos internos, validação estrutural e persistência dos registros com informações de rastreabilidade.',
+        'en-US': 'I worked on Laravel routines for reading CSV and XLSX files, mapping columns to internal fields, structural validation, and persisting records with traceability information.',
       },
       architecture: {
-        webLayer: {
-          'pt-BR': ['Laravel', 'Comandos Artisan customizados', 'Leitura de .csv e .xlsx com Maatwebsite Excel'],
-          'en-US': ['Laravel', 'Custom Artisan commands', '.csv/.xlsx ingestion with Maatwebsite Excel'],
-        },
         backend: {
-          'pt-BR': [
-            'Normalizacao semantica de headers',
-            'Mapeamento dinâmico coluna-campo',
-            'Validacao estrutural obrigatória antes da persistência',
-            'Ignora colunas excedentes e aceita apenas linhas com campos obrigatorios',
-          ],
-          'en-US': [
-            'Semantic header normalization',
-            'Dynamic column-to-field mapping',
-            'Mandatory structural validation before persistence',
-            'Ignores extra columns and accepts only rows with required fields',
-          ],
+          'pt-BR': ['PHP e Laravel', 'Maatwebsite Excel', 'Mapeamento e validação de colunas'],
+          'en-US': ['PHP and Laravel', 'Maatwebsite Excel', 'Column mapping and validation'],
         },
         infra: {
-          'pt-BR': ['MySQL', 'UUID por registro', 'Associação por account_id e rastreabilidade por entidade'],
-          'en-US': ['MySQL', 'UUID per record', 'account_id association and entity-level traceability'],
-        },
-        worker: {
-          'pt-BR': ['Tracking de importação (sucesso/erro)', 'Mensagens estruturadas de validação'],
-          'en-US': ['Import tracking (success/error)', 'Structured validation messages'],
+          'pt-BR': ['MySQL', 'Identificadores e rastreamento de importação'],
+          'en-US': ['MySQL', 'Import identifiers and tracking'],
         },
       },
       results: {
         'pt-BR': [
-          'Padronizacao do processo de importação para múltiplas contas empresariais',
-          'Maior previsibilidade operacional com feedback estruturado de validação',
-          'Reducao de manutencao manual e ganho de escalabilidade do fluxo',
-          'Economia operacional recorrente mensal significativa',
+          'Fluxo consistente de leitura, validação e persistência.',
+          'Rastreabilidade das execuções de importação.',
         ],
         'en-US': [
-          'Standardized import process across multiple business accounts',
-          'Improved operational predictability with structured validation feedback',
-          'Reduced manual maintenance and better workflow scalability',
-          'Significant recurring monthly operational savings',
-        ],
-      },
-    },
-  },
-  {
-    slug: 'gavio-arquitetura',
-    productName: { 'pt-BR': 'Gavio Arquitetura', 'en-US': 'Gavio Arquitetura' },
-    clientName: { 'pt-BR': 'Gavio Arquitetura', 'en-US': 'Gavio Arquitetura' },
-    title: { 'pt-BR': 'Gavio Arquitetura - Site Institucional e Painel Administrativo', 'en-US': 'Gavio Arquitetura - Institutional Website and Admin Panel' },
-    year: '2020-2026',
-    excerpt: {
-      'pt-BR': 'Plataforma web institucional para apresentação de projetos de arquitetura com painel administrativo evolutivo, desenvolvida e modernizada ao longo de múltiplas versões.',
-      'en-US': 'Institutional web platform for showcasing architecture projects with an evolving administrative panel, developed and modernized across multiple versions.',
-    },
-    stack: ['Laravel', 'Blade', 'JavaScript', 'SCSS', 'MySQL'],
-    highlights: {
-      'pt-BR': [
-        'Painel administrativo para gerenciamento de projetos e categorias',
-        'Fluxo de upload e organização de imagens do portfólio',
-        'Páginas publicas institucionais com conteúdo dinâmico',
-        'Estrutura de layout reutilizável para area publica e administrativa',
-      ],
-      'en-US': [
-        'Administrative panel for project and category management',
-        'Portfolio image upload and organization workflow',
-        'Dynamic institutional public pages',
-        'Reusable layout structure for public and admin areas',
-      ],
-    },
-    caseStudy: {
-      problem: {
-        'pt-BR': 'A equipe precisava publicar e atualizar projetos de arquitetura com agilidade, mantendo padrão visual, organização por categoria e autonomia para edições sem dependência técnica constante.\n\nAlém disso, era necessário evoluir técnicamente a aplicação ao longo do tempo, acompanhando mudanças de stack e modernização da área administrativa.',
-        'en-US': 'The team needed to publish and update architecture projects efficiently, maintaining visual consistency, category organization, and editorial autonomy without constant technical dependency.\n\nAdditionally, the platform required technical evolution over time, adapting to stack improvements and administrative modernization.',
-      },
-      solution: {
-        'pt-BR': 'A primeira versão foi desenvolvida em PHP puro (2020), atendendo a necessidade inicial de presença institucional com gerenciamento básico de conteúdo.\n\nEm 2021, a aplicação foi reestruturada em Laravel, consolidando regras de negócio, organizando a arquitetura e estruturando melhor o painel administrativo.\n\nEm 2024, realizei uma atualização focada na modernização da área administrativa, refinando fluxos de edição, organização de categorias e usabilidade.\n\nNo início de 2026, uma nova atualização foi implementada, com melhorias de layout, padronização visual e integração de tecnologias mais modernas, tornando o gerenciamento de conteúdo mais fluido e sustentável a longo prazo.',
-        'en-US': 'The first version was built in plain PHP (2020), addressing the initial need for an institutional presence with basic content management.\n\nIn 2021, the application was restructured using Laravel, consolidating business rules, organizing the architecture and improving the administrative panel structure.\n\nIn 2024, I implemented an update focused on modernizing the admin area, refining editing flows, category organization and usability.\n\nIn early 2026, a new update introduced layout improvements, visual standardization and integration of more modern technologies, making content management smoother and more sustainable long-term.',
-      },
-      architecture: {
-        webLayer: {
-          'pt-BR': ['Laravel', 'Blade Templates', 'Renderização server-side', 'Layout responsivo'],
-          'en-US': ['Laravel', 'Blade Templates', 'Server-side rendering', 'Responsive layout'],
-        },
-        backend: {
-          'pt-BR': ['Laravel', 'Regras de negócio para projetos e categorias', 'Autenticação e controle de acesso administrativo'],
-          'en-US': ['Laravel', 'Business rules for projects and categories', 'Administrative authentication and access control'],
-        },
-        frontendComponent: {
-          'pt-BR': ['JavaScript', 'SCSS', 'Interações para listagem e operações de CRUD'],
-          'en-US': ['JavaScript', 'SCSS', 'Interactions for listing and CRUD operations'],
-        },
-        infra: {
-          'pt-BR': ['MySQL', 'Armazenamento de imagens e assets'],
-          'en-US': ['MySQL', 'Image and asset storage'],
-        },
-      },
-      results: {
-        'pt-BR': [
-          'Evolucao continua da plataforma ao longo de múltiplas versões',
-          'Processo de atualização de portfólio mais rapido e padronizado',
-          'Maior autonomia da equipe para manutencao de conteúdo',
-          'Base administrativa reutilizável para evolucoes futuras',
-          'Arquitetura sustentável e adaptavel ao longo do tempo',
-        ],
-        'en-US': [
-          'Continuous platform evolution across multiple versions',
-          'Faster and standardized portfólio updates',
-          'Greater editorial autonomy',
-          'Reusable administrative base for future expansion',
-          'Sustainable and adaptable architecture over time',
+          'Consistent reading, validation, and persistence workflow.',
+          'Traceability for import executions.',
         ],
       },
     },
   },
 ]
-
-
