@@ -33,9 +33,14 @@ export function ExperienceSection() {
             <p className="mt-1 text-sm font-medium text-slate-700">
               {getTranslated(experience.role, locale)}
             </p>
-            <p className="mt-4 text-sm leading-relaxed text-slate-700">
-              {getTranslated(experience.summary, locale)}
-            </p>
+            <ul className="mt-4 space-y-2 text-sm leading-relaxed text-slate-700">
+              {getTranslated(experience.highlights, locale).map((highlight) => (
+                <li key={highlight} className="flex items-start gap-2">
+                  <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-slate-500" />
+                  <span>{highlight}</span>
+                </li>
+              ))}
+            </ul>
             <div className="mt-4 flex flex-wrap gap-2">
               {experience.stack.map((technology) => (
                 <span
