@@ -17,7 +17,7 @@ export type Experience = {
   period: Translated<string>
   workMode: Translated<string>
   companyContext: Translated<string>
-  summary: Translated<string>
+  highlights: Translated<string[]>
   areas: ExperienceArea[]
   relatedWork?: RelatedWork[]
   stack: string[]
@@ -43,9 +43,17 @@ export const experiences: Experience[] = [
       'pt-BR': 'Software house responsável por aplicações de diferentes segmentos. Atuo tanto em sistemas novos quanto em bases legadas que continuam em operação.',
       'en-US': 'Software house responsible for applications across different sectors. I work on both new systems and legacy codebases that remain in operation.',
     },
-    summary: {
-      'pt-BR': 'Evolução e sustentação de aplicações web, com foco em APIs, regras de negócio, integrações e fluxos operacionais.',
-      'en-US': 'Development and maintenance of web applications, focused on APIs, business rules, integrations, and operational workflows.',
+    highlights: {
+      'pt-BR': [
+        'Evolução e sustentação de aplicações novas e legadas em uma software house.',
+        'APIs REST, regras de negócio e integrações com MySQL, incluindo pagamentos, Pix, webhooks, checkout, pedidos, frete e rotinas financeiras.',
+        'Integração de backends Laravel com interfaces em React e Next.js, além de PDFs, filas, jobs e notificações.',
+      ],
+      'en-US': [
+        'Development and maintenance of new and legacy applications at a software house.',
+        'REST APIs, business rules, and MySQL integrations, including payments, Pix, webhooks, checkout, orders, shipping, and financial workflows.',
+        'Integration of Laravel backends with React and Next.js interfaces, plus PDFs, queues, jobs, and notifications.',
+      ],
     },
     areas: [
       {
@@ -118,9 +126,17 @@ export const experiences: Experience[] = [
       'pt-BR': 'Empresa de tecnologia com plataformas de gestão documental, RH e assinatura digital utilizadas por múltiplos clientes.',
       'en-US': 'Technology company with document management, HR, and digital signature platforms used by multiple clients.',
     },
-    summary: {
-      'pt-BR': 'Desenvolvimento e manutenção de plataformas multi-clientes, com trabalho em documentos, permissões, processamento de arquivos e assinatura digital.',
-      'en-US': 'Development and maintenance of multi-client platforms involving documents, permissions, file processing, and digital signatures.',
+    highlights: {
+      'pt-BR': [
+        'Desenvolvimento e manutenção de plataformas multi-clientes de gestão documental, RH e assinatura digital.',
+        'Trabalho com uploads, permissões, indexadores, classes documentais, importação de arquivos, geração de PDFs, filas, jobs e e-mails.',
+        'Aplicações Laravel e React em ambientes com Docker e serviços AWS, incluindo S3 e SES.',
+      ],
+      'en-US': [
+        'Development and maintenance of multi-client document management, HR, and digital signature platforms.',
+        'Work involving uploads, permissions, indexers, document classes, file imports, PDF generation, queues, jobs, and email.',
+        'Laravel and React applications in environments using Docker and AWS services, including S3 and SES.',
+      ],
     },
     areas: [
       {
