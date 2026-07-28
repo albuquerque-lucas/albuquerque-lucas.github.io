@@ -21,6 +21,9 @@ export function SiteHeader() {
           {profile.name}
         </Link>
         <nav className="flex flex-wrap items-center gap-3 text-xs text-slate-600 sm:gap-4 sm:text-sm">
+          <Link to="/experiencia" className="hover:text-slate-900">
+            {labels.nav.experience}
+          </Link>
           <Link to="/about" className="hover:text-slate-900">
             {labels.nav.about}
           </Link>

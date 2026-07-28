@@ -1,23 +1,19 @@
-﻿import type { Translated } from '../i18n/types'
+import type { Translated } from '../i18n/types'
 
 export type AboutContent = {
   hero: {
     headline: Translated<string>
     subheadline: Translated<string>
   }
-  mindset: {
+  profile: {
     title: Translated<string>
     paragraphs: Translated<string[]>
   }
-  principles: {
+  technologies: {
     title: Translated<string>
     items: Translated<string[]>
   }
-  trajectory: {
-    title: Translated<string>
-    paragraphs: Translated<string[]>
-  }
-  current: {
+  education: {
     title: Translated<string>
     paragraphs: Translated<string[]>
   }
@@ -30,27 +26,27 @@ export const aboutContent: AboutContent = {
       'en-US': 'Full Stack Developer | PHP/Laravel, React, and TypeScript',
     },
     subheadline: {
-      'pt-BR': 'Trabalho com aplicações web em produção, APIs REST, regras de negócio, integrações com MySQL, filas, jobs e processamento assíncrono.',
-      'en-US': 'I work with production web applications, REST APIs, business rules, MySQL integrations, queues, jobs, and asynchronous processing.',
+      'pt-BR': 'Trabalho com sistemas web em produção, do backend Laravel às interfaces em React e TypeScript.',
+      'en-US': 'I work on production web systems, from Laravel backends to React and TypeScript interfaces.',
     },
   },
-  mindset: {
+  profile: {
     title: {
-      'pt-BR': 'Atuação',
-      'en-US': 'Experience',
+      'pt-BR': 'Perfil',
+      'en-US': 'Profile',
     },
     paragraphs: {
       'pt-BR': [
-        'Atualmente trabalho na Bredi, uma software house onde atuo na evolução e sustentação de aplicações novas e legadas para diferentes segmentos. Minha rotina inclui APIs, integrações de pagamento e Pix, webhooks, checkout, pedidos, frete, rotinas financeiras, documentos PDF e notificações.',
-        'Anteriormente, na Docteka, participei do desenvolvimento e manutenção de plataformas multi-clientes de gestão documental, RH e assinatura digital, trabalhando com uploads, permissões, importação de arquivos, geração de PDFs, filas, jobs e e-mails.',
+        'Meu foco principal é o backend com PHP e Laravel: APIs REST, regras de negócio, integrações com MySQL, filas, jobs e processamento de arquivos.',
+        'Também atuo no frontend com React, TypeScript e Next.js, conectando interfaces aos fluxos da aplicação e acompanhando as entregas em produção.',
       ],
       'en-US': [
-        'I currently work at Bredi, a software house where I develop and maintain new and legacy applications across different sectors. My routine includes APIs, payment and Pix integrations, webhooks, checkout, orders, shipping, financial workflows, PDF documents, and notifications.',
-        'Previously, at Docteka, I helped develop and maintain multi-client document management, HR, and digital signature platforms, working with uploads, permissions, file imports, PDF generation, queues, jobs, and email.',
+        'My main focus is backend development with PHP and Laravel: REST APIs, business rules, MySQL integrations, queues, jobs, and file processing.',
+        'I also work on the frontend with React, TypeScript, and Next.js, connecting interfaces to application workflows and supporting production delivery.',
       ],
     },
   },
-  principles: {
+  technologies: {
     title: {
       'pt-BR': 'Tecnologias',
       'en-US': 'Technologies',
@@ -59,20 +55,20 @@ export const aboutContent: AboutContent = {
       'pt-BR': [
         'Backend: PHP, Laravel, Node.js e APIs REST.',
         'Frontend: React, TypeScript, JavaScript e Next.js.',
-        'Dados e processamento: MySQL, filas, jobs, webhooks e processamento assíncrono.',
+        'Dados e processamento: MySQL, filas, jobs, webhooks e importação de arquivos.',
         'Infraestrutura e ferramentas: Docker, GitHub Actions, AWS e Git.',
         'Complementares: Python, FastAPI e WeasyPrint.',
       ],
       'en-US': [
         'Backend: PHP, Laravel, Node.js, and REST APIs.',
         'Frontend: React, TypeScript, JavaScript, and Next.js.',
-        'Data and processing: MySQL, queues, jobs, webhooks, and asynchronous processing.',
+        'Data and processing: MySQL, queues, jobs, webhooks, and file imports.',
         'Infrastructure and tools: Docker, GitHub Actions, AWS, and Git.',
         'Additional tools: Python, FastAPI, and WeasyPrint.',
       ],
     },
   },
-  trajectory: {
+  education: {
     title: {
       'pt-BR': 'Formação e certificação',
       'en-US': 'Education and certification',
@@ -90,23 +86,4 @@ export const aboutContent: AboutContent = {
       ],
     },
   },
-  current: {
-    title: {
-      'pt-BR': 'Perfil',
-      'en-US': 'Profile',
-    },
-    paragraphs: {
-      'pt-BR': [
-        'Meu foco principal é PHP e Laravel no backend. Também atuo com React e TypeScript no frontend, conectando interfaces a APIs e regras de negócio.',
-        'Neste portfólio estão alguns projetos públicos e estudos de caso relacionados ao trabalho que venho desenvolvendo.',
-      ],
-      'en-US': [
-        'My main focus is PHP and Laravel on the backend. I also work with React and TypeScript on the frontend, connecting interfaces to APIs and business rules.',
-        'This portfolio contains selected public projects and case studies related to the work I have been doing.',
-      ],
-    },
-  },
 }
-
-
-

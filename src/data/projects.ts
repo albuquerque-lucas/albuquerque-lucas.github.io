@@ -3,26 +3,28 @@ import type { Translated } from '../i18n/types'
 export type Project = {
   slug: string
   productName: Translated<string>
-  clientName: Translated<string>
-  title: Translated<string>
-  subtitle?: Translated<string>
+  contextLabel: Translated<string>
+  role: Translated<string>
   year: Translated<string>
   excerpt: Translated<string>
   stack: string[]
   highlights: Translated<string[]>
-  links?: { repo?: string; demo?: string }
+  links?: {
+    repository?: string
+    backendRepository?: string
+    frontendRepository?: string
+    demo?: string
+  }
   caseStudy: {
-    problem: Translated<string>
-    solution: Translated<string>
+    context: Translated<string[]>
+    participation: Translated<string[]>
+    features: Translated<string[]>
     architecture: {
-      webLayer?: Translated<string[]>
       frontend?: Translated<string[]>
       backend?: Translated<string[]>
-      frontendComponent?: Translated<string[]>
       worker?: Translated<string[]>
       infra?: Translated<string[]>
     }
-    results: Translated<string[]>
   }
 }
 
@@ -30,15 +32,11 @@ export const projects: Project[] = [
   {
     slug: 'mapiq-drone-inspection-reporting-platform',
     productName: { 'pt-BR': 'MapIQ', 'en-US': 'MapIQ' },
-    clientName: {
-      'pt-BR': 'Principal responsabilidade técnica',
-      'en-US': 'Primary technical responsibility',
+    contextLabel: {
+      'pt-BR': 'Projeto sob demanda',
+      'en-US': 'On-demand project',
     },
-    title: {
-      'pt-BR': 'MapIQ — Plataforma multiempresa de relatórios técnicos',
-      'en-US': 'MapIQ — Multi-company technical reporting platform',
-    },
-    subtitle: {
+    role: {
       'pt-BR': 'Principal responsável técnico, com colaboração pontual no frontend.',
       'en-US': 'Primary technical contributor, with occasional frontend collaboration.',
     },
@@ -50,13 +48,13 @@ export const projects: Project[] = [
     stack: ['Laravel', 'PHP', 'MySQL', 'React', 'TypeScript', 'FastAPI', 'WeasyPrint'],
     highlights: {
       'pt-BR': [
-        'Integração entre SPA, API REST e worker dedicado à geração de PDFs',
-        'Autenticação, controle de acesso e organização por empresas e filiais',
+        'SPA, API REST e worker dedicado à geração de PDFs',
+        'Autenticação e permissões por empresa, filial e participação',
         'Editor de páginas, revisão, aprovação e notificações em tempo real',
       ],
       'en-US': [
-        'Integration across the SPA, REST API, and dedicated PDF worker',
-        'Authentication, access control, and organization by companies and branches',
+        'SPA, REST API, and a dedicated PDF generation worker',
+        'Authentication and permissions by company, branch, and participation',
         'Page editor, review, approval, and real-time notifications',
       ],
     },
@@ -64,53 +62,74 @@ export const projects: Project[] = [
       demo: 'https://relatorios.mapiq.com.br/login',
     },
     caseStudy: {
-      problem: {
-        'pt-BR': 'A operação precisava reunir, em uma plataforma multiempresa, a montagem de relatórios técnicos com páginas de texto e mapas, além dos fluxos de revisão, aprovação e geração de PDF.',
-        'en-US': 'The operation needed a multi-company platform that combined technical report authoring with text and map pages, along with review, approval, and PDF generation workflows.',
+      context: {
+        'pt-BR': [
+          'O MapIQ reúne em uma plataforma multiempresa a criação de relatórios técnicos formados por páginas de texto e mapas. O fluxo inclui edição, revisão, aprovação, notificações e geração do documento final em PDF.',
+          'Prestadora, clientes, filiais, responsáveis e participantes possuem níveis diferentes de acesso aos relatórios e às ações disponíveis.',
+        ],
+        'en-US': [
+          'MapIQ brings together, in a multi-company platform, the creation of technical reports made up of text and map pages. The workflow covers editing, review, approval, notifications, and final PDF generation.',
+          'Service providers, clients, branches, owners, and participants have different levels of access to reports and available actions.',
+        ],
       },
-      solution: {
-        'pt-BR': 'Fui o principal responsável técnico pela integração entre a SPA em React e TypeScript, a API Laravel/MySQL e o worker FastAPI/WeasyPrint. O trabalho incluiu autenticação e controle de acesso, estrutura multiempresa, páginas editáveis, revisão, aprovação, notificações em tempo real e automação de deploy, com colaboração pontual no frontend.',
-        'en-US': 'I was the primary technical contributor responsible for integrating the React and TypeScript SPA, the Laravel/MySQL API, and the FastAPI/WeasyPrint worker. The work covered authentication and access control, multi-company structure, editable pages, review, approval, real-time notifications, and deployment automation, with occasional frontend collaboration.',
+      participation: {
+        'pt-BR': [
+          'Fui o principal responsável técnico pela arquitetura integrada: a API Laravel/MySQL, a SPA React/TypeScript e o worker FastAPI/WeasyPrint.',
+          'Conduzi os fluxos centrais de relatórios, autorização, páginas, mapas, templates, aprovação, notificações e integração com o gerador de PDF. Houve colaboração pontual no frontend, principalmente fora desses módulos centrais.',
+        ],
+        'en-US': [
+          'I was the primary technical contributor responsible for the integrated architecture: the Laravel/MySQL API, the React/TypeScript SPA, and the FastAPI/WeasyPrint worker.',
+          'I drove the core reporting, authorization, pages, maps, templates, approval, notifications, and PDF integration workflows. There was occasional frontend collaboration, mainly outside these core modules.',
+        ],
+      },
+      features: {
+        'pt-BR': [
+          'Autenticação JWT e autorização com papéis, permissões, Policies e filtros de acesso.',
+          'Organização de prestadora, clientes, filiais, responsáveis e participantes.',
+          'Páginas de texto e mapas com editor rico, templates, variáveis, imagens e ordenação.',
+          'Histórico de status, revisão, aprovação e notificações persistidas e em tempo real.',
+          'Composição e geração de PDFs pelo worker dedicado.',
+          'Deploys independentes automatizados com GitHub Actions e SSH.',
+        ],
+        'en-US': [
+          'JWT authentication and authorization with roles, permissions, Policies, and access filters.',
+          'Organization of service providers, clients, branches, owners, and participants.',
+          'Text and map pages with rich editing, templates, variables, images, and ordering.',
+          'Status history, review, approval, and persistent real-time notifications.',
+          'PDF composition and generation through the dedicated worker.',
+          'Independent automated deployments with GitHub Actions and SSH.',
+        ],
       },
       architecture: {
         frontend: {
-          'pt-BR': ['React e TypeScript', 'SPA integrada por API REST', 'Editor de páginas de texto e mapas'],
-          'en-US': ['React and TypeScript', 'SPA connected through a REST API', 'Text and map page editor'],
+          'pt-BR': ['React e TypeScript', 'React Query e Axios', 'Editor de texto, mapas e ordenação visual'],
+          'en-US': ['React and TypeScript', 'React Query and Axios', 'Text, map, and visual ordering editors'],
         },
         backend: {
-          'pt-BR': ['Laravel e MySQL', 'Autenticação JWT e controle de acesso', 'Empresas, filiais, relatórios e etapas de aprovação'],
-          'en-US': ['Laravel and MySQL', 'JWT authentication and access control', 'Companies, branches, reports, and approval stages'],
+          'pt-BR': ['PHP, Laravel e MySQL', 'API REST, JWT e Policies', 'Domínio multiempresa e ciclo de aprovação'],
+          'en-US': ['PHP, Laravel, and MySQL', 'REST API, JWT, and Policies', 'Multi-company domain and approval lifecycle'],
         },
         worker: {
-          'pt-BR': ['FastAPI', 'WeasyPrint', 'Geração de documentos PDF'],
-          'en-US': ['FastAPI', 'WeasyPrint', 'PDF document generation'],
+          'pt-BR': ['Python e FastAPI', 'Jinja2 e WeasyPrint', 'HTML/CSS de impressão e geração de PDF'],
+          'en-US': ['Python and FastAPI', 'Jinja2 and WeasyPrint', 'Print HTML/CSS and PDF generation'],
         },
         infra: {
           'pt-BR': ['GitHub Actions', 'Deploy automatizado por SSH'],
           'en-US': ['GitHub Actions', 'Automated deployment over SSH'],
         },
       },
-      results: {
-        'pt-BR': [
-          'Fluxo integrado de criação, revisão, aprovação e geração de relatórios.',
-          'Controle de acesso e organização por empresa e filial.',
-          'Notificações em tempo real e deploy automatizado.',
-        ],
-        'en-US': [
-          'Integrated report creation, review, approval, and generation workflow.',
-          'Access control and organization by company and branch.',
-          'Real-time notifications and automated deployment.',
-        ],
-      },
     },
   },
   {
     slug: 'gavio-arquitetura',
     productName: { 'pt-BR': 'Gávio Arquitetura', 'en-US': 'Gávio Arquitetura' },
-    clientName: { 'pt-BR': 'Projeto sob demanda', 'en-US': 'On-demand project' },
-    title: {
-      'pt-BR': 'Gávio Arquitetura — Site institucional e painel administrativo',
-      'en-US': 'Gávio Arquitetura — Institutional website and admin panel',
+    contextLabel: {
+      'pt-BR': 'Projeto sob demanda',
+      'en-US': 'On-demand project',
+    },
+    role: {
+      'pt-BR': 'Desenvolvimento da aplicação Laravel, do site público ao painel administrativo.',
+      'en-US': 'Development of the Laravel application, from the public website to the admin panel.',
     },
     year: { 'pt-BR': 'Projeto público', 'en-US': 'Public project' },
     excerpt: {
@@ -120,27 +139,53 @@ export const projects: Project[] = [
     stack: ['PHP', 'Laravel', 'Blade', 'MySQL', 'JavaScript'],
     highlights: {
       'pt-BR': [
-        'Cadastro e organização de projetos e categorias',
-        'Upload e gerenciamento de imagens do portfólio',
-        'Conteúdo institucional administrável',
+        'Site institucional e painel administrativo na mesma aplicação',
+        'Cadastro de projetos, categorias e conteúdo',
+        'Upload e organização das imagens do portfólio',
       ],
       'en-US': [
-        'Project and category management',
-        'Portfolio image upload and management',
-        'Editable institutional content',
+        'Institutional website and admin panel in the same application',
+        'Project, category, and content management',
+        'Portfolio image upload and organization',
       ],
     },
     links: {
-      repo: 'https://github.com/albuquerque-lucas/Gavio-Arquitetura-2.0',
+      repository: 'https://github.com/albuquerque-lucas/Gavio-Arquitetura-2.0',
     },
     caseStudy: {
-      problem: {
-        'pt-BR': 'O site precisava apresentar projetos de arquitetura de forma organizada e permitir que o conteúdo fosse atualizado por uma área administrativa.',
-        'en-US': 'The website needed to present architecture projects in an organized way and allow content updates through an administrative area.',
+      context: {
+        'pt-BR': [
+          'O projeto precisava apresentar trabalhos de arquitetura em um site institucional e permitir que o conteúdo fosse mantido sem alterações diretas no código.',
+        ],
+        'en-US': [
+          'The project needed to showcase architecture work on an institutional website while allowing content updates without direct code changes.',
+        ],
       },
-      solution: {
-        'pt-BR': 'Desenvolvi uma aplicação Laravel com páginas institucionais, organização de projetos por categorias, gerenciamento de imagens e painel autenticado para manutenção do conteúdo.',
-        'en-US': 'I built a Laravel application with institutional pages, project organization by category, image management, and an authenticated admin panel for content maintenance.',
+      participation: {
+        'pt-BR': [
+          'Desenvolvi a aplicação em Laravel, incluindo as páginas públicas, a autenticação administrativa e os fluxos de cadastro e manutenção do portfólio.',
+          'O escopo é deliberadamente simples: uma aplicação institucional com conteúdo dinâmico e uma área administrativa correspondente.',
+        ],
+        'en-US': [
+          'I developed the Laravel application, including public pages, admin authentication, and portfolio creation and maintenance workflows.',
+          'The scope is intentionally straightforward: an institutional application with dynamic content and its corresponding admin area.',
+        ],
+      },
+      features: {
+        'pt-BR': [
+          'Cadastro e edição de projetos de arquitetura.',
+          'Organização do portfólio por categorias.',
+          'Upload e gerenciamento de imagens.',
+          'Páginas institucionais com conteúdo administrável.',
+          'Área administrativa autenticada.',
+        ],
+        'en-US': [
+          'Architecture project creation and editing.',
+          'Portfolio organization by category.',
+          'Image upload and management.',
+          'Institutional pages with editable content.',
+          'Authenticated admin area.',
+        ],
       },
       architecture: {
         frontend: {
@@ -156,249 +201,95 @@ export const projects: Project[] = [
           'en-US': ['MySQL', 'Image storage'],
         },
       },
-      results: {
-        'pt-BR': [
-          'Site institucional e painel administrativo reunidos na mesma aplicação.',
-          'Fluxos de cadastro e atualização de projetos e imagens.',
-        ],
-        'en-US': [
-          'Institutional website and admin panel in the same application.',
-          'Project and image creation and update workflows.',
-        ],
-      },
     },
   },
   {
     slug: 'testello',
     productName: { 'pt-BR': 'Testello', 'en-US': 'Testello' },
-    clientName: { 'pt-BR': 'Projeto pessoal', 'en-US': 'Personal project' },
-    title: {
-      'pt-BR': 'Testello — Processamento de arquivos e gestão de fretes',
-      'en-US': 'Testello — File processing and shipping management',
+    contextLabel: {
+      'pt-BR': 'Caso Full Stack',
+      'en-US': 'Full Stack case study',
     },
-    year: { 'pt-BR': 'Projeto público', 'en-US': 'Public project' },
+    role: {
+      'pt-BR': 'Backend Laravel e interface React/TypeScript desenvolvidos como partes da mesma solução.',
+      'en-US': 'Laravel backend and React/TypeScript interface built as parts of the same solution.',
+    },
+    year: {
+      'pt-BR': 'Backend e frontend públicos',
+      'en-US': 'Public backend and frontend',
+    },
     excerpt: {
-      'pt-BR': 'Backend Laravel para processamento de arquivos e organização de dados relacionados à gestão de fretes.',
-      'en-US': 'Laravel backend for file processing and organizing data related to shipping management.',
+      'pt-BR': 'Aplicação para importar tabelas de frete em CSV, com API Laravel e SPA React/TypeScript mantidas em repositórios separados.',
+      'en-US': 'Application for importing CSV freight tables, with a Laravel API and React/TypeScript SPA maintained in separate repositories.',
     },
-    stack: ['PHP', 'Laravel', 'MySQL', 'Docker'],
+    stack: ['PHP', 'Laravel', 'MySQL', 'React', 'TypeScript', 'Docker'],
     highlights: {
       'pt-BR': [
-        'API e regras de negócio em Laravel',
-        'Recebimento e processamento estruturado de arquivos',
-        'Persistência e consulta de dados de frete',
+        'Importação e validação de tabelas de frete em CSV',
+        'Backend Laravel com dados de clientes, filiais e faixas de frete',
+        'SPA React/TypeScript integrada à API REST',
       ],
       'en-US': [
-        'Laravel API and business rules',
-        'Structured file upload and processing',
-        'Shipping data persistence and queries',
+        'CSV freight table import and validation',
+        'Laravel backend with clients, branches, and freight ranges',
+        'React/TypeScript SPA integrated with the REST API',
       ],
     },
     links: {
-      repo: 'https://github.com/albuquerque-lucas/testello',
-    },
-    caseStudy: {
-      problem: {
-        'pt-BR': 'O projeto precisava receber arquivos, validar os dados e organizar as informações processadas para consulta em um fluxo de gestão de fretes.',
-        'en-US': 'The project needed to receive files, validate their data, and organize the processed information for use in a shipping management workflow.',
-      },
-      solution: {
-        'pt-BR': 'Estruturei o backend em Laravel, separando o recebimento dos arquivos, as regras de validação e processamento e a persistência dos registros.',
-        'en-US': 'I structured the Laravel backend by separating file intake, validation and processing rules, and record persistence.',
-      },
-      architecture: {
-        backend: {
-          'pt-BR': ['PHP e Laravel', 'API REST', 'Validação e processamento de arquivos'],
-          'en-US': ['PHP and Laravel', 'REST API', 'File validation and processing'],
-        },
-        infra: {
-          'pt-BR': ['MySQL', 'Docker'],
-          'en-US': ['MySQL', 'Docker'],
-        },
-      },
-      results: {
-        'pt-BR': [
-          'Fluxo definido para entrada, validação e processamento de arquivos.',
-          'Dados organizados para consumo pela aplicação frontend.',
-        ],
-        'en-US': [
-          'Defined workflow for file intake, validation, and processing.',
-          'Data organized for consumption by the frontend application.',
-        ],
-      },
-    },
-  },
-  {
-    slug: 'testello-spa',
-    productName: { 'pt-BR': 'Testello SPA', 'en-US': 'Testello SPA' },
-    clientName: { 'pt-BR': 'Projeto pessoal', 'en-US': 'Personal project' },
-    title: {
-      'pt-BR': 'Testello SPA — Interface para gestão de fretes',
-      'en-US': 'Testello SPA — Shipping management interface',
-    },
-    year: { 'pt-BR': 'Projeto público', 'en-US': 'Public project' },
-    excerpt: {
-      'pt-BR': 'Interface em React e TypeScript para envio de arquivos, consulta de dados processados e integração com a API do Testello.',
-      'en-US': 'React and TypeScript interface for file uploads, processed data queries, and integration with the Testello API.',
-    },
-    stack: ['React', 'TypeScript', 'Vite'],
-    highlights: {
-      'pt-BR': [
-        'Integração com a API Laravel',
-        'Fluxo de envio e acompanhamento de arquivos',
-        'Interface responsiva para consulta dos dados',
-      ],
-      'en-US': [
-        'Integration with the Laravel API',
-        'File upload and tracking workflow',
-        'Responsive interface for data queries',
-      ],
-    },
-    links: {
-      repo: 'https://github.com/albuquerque-lucas/testello-spa',
+      backendRepository: 'https://github.com/albuquerque-lucas/testello',
+      frontendRepository: 'https://github.com/albuquerque-lucas/testello-spa',
       demo: 'https://testello-spa.vercel.app/',
     },
     caseStudy: {
-      problem: {
-        'pt-BR': 'Os recursos do backend precisavam de uma interface web para enviar arquivos e consultar as informações processadas.',
-        'en-US': 'The backend capabilities needed a web interface for submitting files and viewing processed information.',
+      context: {
+        'pt-BR': [
+          'O Testello organiza a importação de tabelas de frete recebidas em arquivos CSV. Os registros são associados a clientes e filiais para consulta na aplicação.',
+          'Backend e frontend estão em repositórios públicos separados, mas pertencem ao mesmo produto e são apresentados aqui como um único caso Full Stack.',
+        ],
+        'en-US': [
+          'Testello organizes freight table imports received as CSV files. Records are associated with clients and branches for use in the application.',
+          'Backend and frontend live in separate public repositories, but belong to the same product and are presented here as a single Full Stack case study.',
+        ],
       },
-      solution: {
-        'pt-BR': 'Desenvolvi uma SPA em React e TypeScript conectada à API do Testello, organizando os fluxos de envio, retorno de validações e consulta dos dados.',
-        'en-US': 'I developed a React and TypeScript SPA connected to the Testello API, organizing file upload, validation feedback, and data query flows.',
+      participation: {
+        'pt-BR': [
+          'Estruturei o backend em Laravel, separando upload, validação, processamento e persistência dos registros.',
+          'Desenvolvi a SPA em React e TypeScript para operar os recursos da API, acompanhar o envio dos arquivos e consultar os dados processados.',
+        ],
+        'en-US': [
+          'I structured the Laravel backend by separating upload, validation, processing, and record persistence.',
+          'I developed the React and TypeScript SPA to operate the API, track file submissions, and query processed data.',
+        ],
+      },
+      features: {
+        'pt-BR': [
+          'Upload e validação de arquivos CSV.',
+          'Importação de tabelas e faixas de frete.',
+          'Cadastro e consulta de clientes e filiais.',
+          'API REST para integração entre as aplicações.',
+          'Interface responsiva para operação dos fluxos.',
+        ],
+        'en-US': [
+          'CSV file upload and validation.',
+          'Freight table and range imports.',
+          'Client and branch creation and queries.',
+          'REST API integration between applications.',
+          'Responsive interface for operating the workflows.',
+        ],
       },
       architecture: {
         frontend: {
           'pt-BR': ['React', 'TypeScript', 'Vite', 'Integração com API REST'],
           'en-US': ['React', 'TypeScript', 'Vite', 'REST API integration'],
         },
-      },
-      results: {
-        'pt-BR': [
-          'Interface dedicada aos fluxos do Testello.',
-          'Integração entre envio de arquivos, validações e dados processados.',
-        ],
-        'en-US': [
-          'Dedicated interface for Testello workflows.',
-          'Integration across file submission, validation, and processed data.',
-        ],
-      },
-    },
-  },
-  {
-    slug: 'assinando-digital-signature-platform',
-    productName: { 'pt-BR': 'Assinando', 'en-US': 'Assinando' },
-    clientName: { 'pt-BR': 'Docteka', 'en-US': 'Docteka' },
-    title: {
-      'pt-BR': 'Assinando — Plataforma de assinatura digital',
-      'en-US': 'Assinando — Digital signature platform',
-    },
-    year: { 'pt-BR': '2024–2025', 'en-US': '2024–2025' },
-    excerpt: {
-      'pt-BR': 'Participação na evolução de uma plataforma de assinatura digital, com área autenticada para upload, gestão e acompanhamento de documentos.',
-      'en-US': 'Contribution to the evolution of a digital signature platform with an authenticated area for document upload, management, and tracking.',
-    },
-    stack: ['PHP', 'Laravel', 'Blade', 'React', 'MySQL'],
-    highlights: {
-      'pt-BR': [
-        'Upload e acompanhamento de documentos',
-        'Adaptação de regras de negócio para a camada web',
-        'Validações integradas entre Laravel e React',
-      ],
-      'en-US': [
-        'Document upload and tracking',
-        'Business rule adaptation for the web layer',
-        'Integrated validation across Laravel and React',
-      ],
-    },
-    caseStudy: {
-      problem: {
-        'pt-BR': 'A nova versão web precisava reunir os fluxos autenticados de upload, solicitação de assinatura, acompanhamento de documentos e manutenção de dados do perfil.',
-        'en-US': 'The new web version needed to bring together authenticated flows for uploads, signature requests, document tracking, and profile data maintenance.',
-      },
-      solution: {
-        'pt-BR': 'Participei da implementação da área autenticada em Laravel e Blade, da adaptação de regras já existentes e de validações no componente React usado no fluxo de assinatura.',
-        'en-US': 'I contributed to the authenticated Laravel and Blade area, adapted existing rules, and worked on validation in the React component used in the signature workflow.',
-      },
-      architecture: {
-        frontend: {
-          'pt-BR': ['Blade', 'Componente React', 'Validações de fluxo'],
-          'en-US': ['Blade', 'React component', 'Workflow validation'],
-        },
         backend: {
-          'pt-BR': ['PHP e Laravel', 'Regras de negócio', 'Controle de documentos e status'],
-          'en-US': ['PHP and Laravel', 'Business rules', 'Document and status management'],
-        },
-      },
-      results: {
-        'pt-BR': [
-          'Área autenticada para upload e acompanhamento de documentos.',
-          'Integração entre a aplicação Laravel e o componente React.',
-        ],
-        'en-US': [
-          'Authenticated area for document upload and tracking.',
-          'Integration between the Laravel application and the React component.',
-        ],
-      },
-    },
-  },
-  {
-    slug: 'docteka-structured-data-import-system',
-    productName: {
-      'pt-BR': 'Importação estruturada de dados',
-      'en-US': 'Structured data import',
-    },
-    clientName: { 'pt-BR': 'Docteka', 'en-US': 'Docteka' },
-    title: {
-      'pt-BR': 'Docteka — Importação estruturada de dados',
-      'en-US': 'Docteka — Structured data import',
-    },
-    year: { 'pt-BR': '2024–2025', 'en-US': '2024–2025' },
-    excerpt: {
-      'pt-BR': 'Rotinas Laravel para importação de arquivos CSV e XLSX, com mapeamento de colunas, validação e persistência estruturada.',
-      'en-US': 'Laravel routines for importing CSV and XLSX files with column mapping, validation, and structured persistence.',
-    },
-    stack: ['PHP', 'Laravel', 'MySQL', 'Maatwebsite Excel'],
-    highlights: {
-      'pt-BR': [
-        'Leitura e mapeamento de colunas de arquivos',
-        'Validação antes da persistência',
-        'Rastreabilidade das importações',
-      ],
-      'en-US': [
-        'File column reading and mapping',
-        'Validation before persistence',
-        'Import traceability',
-      ],
-    },
-    caseStudy: {
-      problem: {
-        'pt-BR': 'Arquivos de diferentes origens precisavam ser importados com validação, adaptação dos cabeçalhos e associação correta dos registros.',
-        'en-US': 'Files from different sources needed to be imported with validation, header adaptation, and correct record association.',
-      },
-      solution: {
-        'pt-BR': 'Trabalhei em rotinas Laravel para leitura de CSV e XLSX, mapeamento entre colunas e campos internos, validação estrutural e persistência dos registros com informações de rastreabilidade.',
-        'en-US': 'I worked on Laravel routines for reading CSV and XLSX files, mapping columns to internal fields, structural validation, and persisting records with traceability information.',
-      },
-      architecture: {
-        backend: {
-          'pt-BR': ['PHP e Laravel', 'Maatwebsite Excel', 'Mapeamento e validação de colunas'],
-          'en-US': ['PHP and Laravel', 'Maatwebsite Excel', 'Column mapping and validation'],
+          'pt-BR': ['PHP e Laravel', 'Validação e processamento de CSV', 'Persistência com MySQL'],
+          'en-US': ['PHP and Laravel', 'CSV validation and processing', 'MySQL persistence'],
         },
         infra: {
-          'pt-BR': ['MySQL', 'Identificadores e rastreamento de importação'],
-          'en-US': ['MySQL', 'Import identifiers and tracking'],
+          'pt-BR': ['Docker e Laravel Sail', 'MySQL'],
+          'en-US': ['Docker and Laravel Sail', 'MySQL'],
         },
-      },
-      results: {
-        'pt-BR': [
-          'Fluxo consistente de leitura, validação e persistência.',
-          'Rastreabilidade das execuções de importação.',
-        ],
-        'en-US': [
-          'Consistent reading, validation, and persistence workflow.',
-          'Traceability for import executions.',
-        ],
       },
     },
   },
