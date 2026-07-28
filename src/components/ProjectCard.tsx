@@ -12,7 +12,7 @@ type ProjectCardProps = { project: Project }
 export function ProjectCard({ project }: ProjectCardProps) {
   const { locale, labels } = useI18n()
   const productName = getTranslated(project.productName, locale)
-  const clientName = getTranslated(project.clientName, locale)
+  const contextLabel = getTranslated(project.contextLabel, locale)
   const year = getTranslated(project.year, locale)
   const excerpt = getTranslated(project.excerpt, locale)
   const highlights = getTranslated(project.highlights, locale).slice(0, 3)
@@ -40,7 +40,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
               <ArrowUpRight aria-hidden className="h-4 w-4 shrink-0 text-slate-500 transition group-hover:text-slate-800 md:hidden" />
             </div>
             <div className="mt-2">
-              <ClientBadge clientName={clientName} />
+              <ClientBadge clientName={contextLabel} />
             </div>
             <p className="mt-3 text-sm leading-relaxed text-slate-700">{excerpt}</p>
             <ul className="mt-4 space-y-1.5 text-sm text-slate-700">

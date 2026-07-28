@@ -1,56 +1,128 @@
-﻿import type { Translated } from './types'
+import type { Translated } from './types'
 
 export type Labels = {
-  nav: { about: string; github: string; linkedin: string; email: string }
+  nav: {
+    experience: string
+    about: string
+    github: string
+    linkedin: string
+    email: string
+  }
   locale: { pt: string; en: string }
   sections: {
     experience: string
+    professionalExperience: string
+    experienceIntroduction: string
     projects: string
     items: string
-    problem: string
-    solution: string
-    architecture: string
-    results: string
-    webLayer: string
+    summary: string
+    context: string
+    participation: string
+    features: string
+    technologyStructure: string
     frontend: string
     backend: string
-    frontendComponent: string
     worker: string
     infra: string
+    relatedWork: string
   }
-  buttons: { backToProjects: string; repository: string; demo: string }
-  states: { projectNotFoundTitle: string; projectNotFoundDescription: string }
+  buttons: {
+    viewExperience: string
+    backToProjects: string
+    repository: string
+    backendRepository: string
+    frontendRepository: string
+    demo: string
+  }
+  states: {
+    projectNotFoundTitle: string
+    projectNotFoundDescription: string
+  }
   footer: { rightsReserved: string }
   a11y: { openProject: string }
-  common: { clientLabel: string }
 }
 
 export const labels: Translated<Labels> = {
   'pt-BR': {
-    nav: { about: 'Sobre', github: 'GitHub', linkedin: 'LinkedIn', email: 'E-mail' },
+    nav: {
+      experience: 'Experiência',
+      about: 'Sobre',
+      github: 'GitHub',
+      linkedin: 'LinkedIn',
+      email: 'E-mail',
+    },
     locale: { pt: 'PT', en: 'EN' },
     sections: {
-      experience: 'Experiência', projects: 'Projetos', items: 'itens', problem: 'Contexto', solution: 'Atuação', architecture: 'Tecnologias e estrutura', results: 'Contribuições',
-      webLayer: 'Web Layer', frontend: 'Frontend', backend: 'Backend', frontendComponent: 'Componente Frontend', worker: 'Worker', infra: 'Infra',
+      experience: 'Experiência',
+      professionalExperience: 'Experiência profissional',
+      experienceIntroduction: 'Um resumo do contexto, das responsabilidades e das tecnologias que fizeram parte de cada atuação.',
+      projects: 'Projetos',
+      items: 'itens',
+      summary: 'Em resumo',
+      context: 'Contexto',
+      participation: 'Minha participação',
+      features: 'Principais funcionalidades',
+      technologyStructure: 'Tecnologias e estrutura',
+      frontend: 'Frontend',
+      backend: 'Backend',
+      worker: 'Worker de PDF',
+      infra: 'Infraestrutura',
+      relatedWork: 'Trabalhos representativos',
     },
-    buttons: { backToProjects: 'Voltar para projetos', repository: 'Repositório', demo: 'Demo' },
-    states: { projectNotFoundTitle: 'Projeto não encontrado', projectNotFoundDescription: 'O projeto solicitado não existe.' },
+    buttons: {
+      viewExperience: 'Ver experiência',
+      backToProjects: 'Voltar para projetos',
+      repository: 'Repositório',
+      backendRepository: 'Backend',
+      frontendRepository: 'Frontend',
+      demo: 'Aplicação',
+    },
+    states: {
+      projectNotFoundTitle: 'Projeto não encontrado',
+      projectNotFoundDescription: 'O projeto solicitado não existe.',
+    },
     footer: { rightsReserved: 'Todos os direitos reservados.' },
     a11y: { openProject: 'Abrir projeto' },
-    common: { clientLabel: 'Cliente' },
   },
   'en-US': {
-    nav: { about: 'About', github: 'GitHub', linkedin: 'LinkedIn', email: 'Email' },
+    nav: {
+      experience: 'Experience',
+      about: 'About',
+      github: 'GitHub',
+      linkedin: 'LinkedIn',
+      email: 'Email',
+    },
     locale: { pt: 'PT', en: 'EN' },
     sections: {
-      experience: 'Experience', projects: 'Projects', items: 'items', problem: 'Context', solution: 'Work delivered', architecture: 'Technology and structure', results: 'Contributions',
-      webLayer: 'Web Layer', frontend: 'Frontend', backend: 'Backend', frontendComponent: 'Frontend Component', worker: 'Worker', infra: 'Infra',
+      experience: 'Experience',
+      professionalExperience: 'Professional experience',
+      experienceIntroduction: 'A summary of the context, responsibilities, and technologies involved in each role.',
+      projects: 'Projects',
+      items: 'items',
+      summary: 'At a glance',
+      context: 'Context',
+      participation: 'My contribution',
+      features: 'Key features',
+      technologyStructure: 'Technology and structure',
+      frontend: 'Frontend',
+      backend: 'Backend',
+      worker: 'PDF worker',
+      infra: 'Infrastructure',
+      relatedWork: 'Representative work',
     },
-    buttons: { backToProjects: 'Back to projects', repository: 'Repository', demo: 'Demo' },
-    states: { projectNotFoundTitle: 'Project not found', projectNotFoundDescription: 'The requested project does not exist.' },
+    buttons: {
+      viewExperience: 'View experience',
+      backToProjects: 'Back to projects',
+      repository: 'Repository',
+      backendRepository: 'Backend',
+      frontendRepository: 'Frontend',
+      demo: 'Live app',
+    },
+    states: {
+      projectNotFoundTitle: 'Project not found',
+      projectNotFoundDescription: 'The requested project does not exist.',
+    },
     footer: { rightsReserved: 'All rights reserved.' },
     a11y: { openProject: 'Open project' },
-    common: { clientLabel: 'Client' },
   },
 }
-
